@@ -1,0 +1,804 @@
+@font-face {
+	font-family: codeLight;
+	src: url(../Assets/Fonts/codeLight/CODE_Light.ttf);
+}
+@font-face {
+	font-family: roboto;
+	src: url(../Assets/Fonts/robotoRegular/Roboto-Regular.ttf);
+}
+body, nav.fullNav ul, h2, p {
+	margin: 0;
+	padding: 0;
+}
+body, header, nav ul {
+	overflow-x: hidden;
+}
+body {
+	width: 100vw;
+
+	font-family: Helvetica, sans-serif;
+	font-size: 16px;
+	background-image: url(../Assets/plainWall.jpg);
+	background-attachment: fixed;
+}
+header {
+	z-index: 2;
+	background-color: rgba(188, 188, 188, 0.5);
+	column-count: 3;
+	position: sticky;
+	top: 0;
+}
+a {
+	font-family: roboto, sans-serif;
+	text-decoration: none;
+	font-weight: 600;
+}
+.button{
+
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: .6em 1em;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    font-size: 1.2em;
+    background-color: transparent;
+    transition: .5s ease-out;
+}
+.button a {
+	color: white;
+	transition: .5s all;
+}
+.button:hover{
+   background-color: white;
+   color: #333;
+}
+.button:hover a {
+	color: black;
+}
+.homeWrapper {
+	height: 100vh;
+	overflow: hidden;
+}
+.hamburger {
+	height: 50px;
+	display: none;
+}
+.share {
+	height: 50px;
+	display: none;
+}
+nav ul {
+	list-style-type: none;
+}
+.fullNav a {
+	color: black;
+}
+nav.fullNav li {
+	float: left;
+	margin: 1.2rem 0 .9rem 0;
+
+	font-family: roboto;
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: black;
+	text-decoration: none;
+	/*positioning*/
+
+	padding: 0 1em 0 1em;
+	border-right: .5px solid darkgray;
+}
+.fullNav li.last {
+	border-right: none;
+}
+nav li:hover {
+	cursor: pointer;
+}
+nav li.one a:hover {
+	color: purple;
+}
+nav li.two a:hover {
+	color: blue;
+}
+nav li.three a:hover {
+	color: green;
+}
+nav li.last a:hover {
+	color: red;
+}
+.dropNav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 0;
+	z-index: 3;
+	background-color: #111;
+	transition: .5s ease-out all;
+	overflow-x: hidden;
+	text-align: center;
+}
+.dropNav li {
+	list-style-type: none;
+	padding-top: 3rem;
+}
+.dropNav a {
+	color: #444;
+	transition: .3s ease-in-out;
+}
+.dropNav a:hover {
+	color: white;
+}
+.dropNav #closeBttn {
+	height: 50px;
+  position: absolute;
+	top: 5px;
+	right: 100px;
+}
+header h1 {
+	font-family: codeLight, helvetica, sans-serif;
+	font-size: 2rem;
+	font-weight: 900;
+	letter-spacing: .3rem;
+
+	text-align: center;
+}
+.socialMediaIcons {
+	float: right;
+	padding: .5rem 1.2rem 0 1rem;
+}
+.socialMediaIcons img {
+	height: 2.5rem;
+}
+.socialMediaIcons img:hover {
+	opacity: 0.5;
+}
+.wrapper {}
+.topSect {
+	background-color: black;
+	height: 100vh;
+}
+.topSect iframe {
+	width: 80vw;
+	height: 80vh;
+
+	position: absolute;
+	margin: auto;
+	top: 14vh;
+	left: 10vw;
+}
+
+.coversSect {
+
+}
+
+.coverDiscript h2 {
+	font-family: roboto, sans-serif;
+	position: absolute;
+	top: 20vh;
+	padding: 5px 1rem;
+	left: calc(50vw - 4rem);
+	background-color: black;
+	color: white;
+}
+.coverDiscript p {
+
+}
+.album {
+  	height: 24rem;
+    width: 24rem;
+    /*positioning*/
+    position: absolute;
+    top: 60vh;
+    margin-left: 12rem;
+    transform: translate( -50% , -50%);
+    /*FLIP EFFECT*/
+    transform-style: preserve-3d;
+    perspective: 600px;
+    transition: 0.5s all;
+    box-shadow: 2px 2px 10px;
+}
+.darkSide {
+    left: 3rem;
+}
+.wishYouWereHere {
+    left: calc(50vw - 12rem);
+}
+.pulse {
+    left: calc(100vw - 27rem);
+}
+.album .front{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  /*hidden background*/
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+    transition: 0.5s;
+}
+.album .front img {
+    width: 100%;
+    height: 100%;
+}
+.album:hover .front {
+    transform: rotateX(-180deg);
+}
+.album:hover {
+    box-shadow: 0 0  10px grey;
+    transition-delay: 0.3s;
+}
+
+.album .back {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /*hidden background*/
+    backface-visibility: hidden;
+    transition: 0.5s;
+    transform: rotateX(180deg);
+}
+.album:hover .back {
+    transform: rotateX(0deg);
+}
+
+/*content*/
+.backContent {
+    position: relative;
+    top: -2rem;
+}
+.back h1 {
+    font-size: 2rem;
+    font-weight: 200;
+    color: white;
+    position: relative;
+    top: 4rem;
+}
+.pulse .info {
+	transform: translateY(2rem);
+}
+.back p {
+    font-size: 1rem;
+    position: relative;
+    top: 5rem;
+    color: white;
+    margin: 2rem;
+}
+.back .line {
+    position: relative;
+    top: 4em;
+    margin: auto;
+    width: 15em;
+    height: .1em;
+    background-color: white;
+}
+.albumButton {
+	position: relative;
+  top: 5em;
+  width: 10em;
+}
+.seeMore {
+	text-align: center;
+	width: 10em;
+	background-color: black;
+	position: relative;
+	/* top: 50rem; */
+}
+.quoteSect {
+	overflow: hidden;
+	background-color: black;
+	height: 110vh;
+}
+.quoteSect img {
+	width: 100vw;
+	transform: translate(0 , -30%);
+}
+.quote {
+	position: absolute;
+	top: 235vh;
+	left: 47vw;
+}
+.quote p {
+	font-family: roboto, helvetica, sans-serif;
+	color: white;
+	text-align: center;
+	font-size: 2.5rem;
+	font-weight: 900;
+	transform: translate(-15vw , 0);
+}
+.quote h2 {
+	font-family: codeLight, helvetica, sans-serif;
+	font-size: 2rem;
+	color: lightgrey;
+}
+.mosaicSect {
+	height: 110vh;
+	background-color: black;
+}
+.mosaicContainer {
+	height: 110vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.mosaicContainer div {
+	overflow: hidden;
+}
+.mosaicContainer img {
+	display: block;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	opacity: 0.8;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+}
+.mosaicContainer img:hover {
+	opacity: 1;
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-o-transform: scale(1.1);
+}
+
+.mos1 {
+	grid-column: span 2;
+	grid-row: span 1;
+}
+.mos2 {
+	grid-column: span 4;
+	grid-row: span 2;
+}
+.mos3 {
+	grid-column: span 2;
+	grid-row: span 3;
+}
+.mos4 {
+	grid-column: span 2;
+	grid-row: span 1;
+}
+.mos5 {
+	grid-column: span 4;
+	grid-row: span 2;
+}
+.mos6 {
+	grid-column: span 1;
+	grid-row: span 1;
+}
+.mos7 {
+	grid-column: span 1;
+	grid-row: span 1;
+}
+.mos8 {
+	grid-column: span 2;
+	grid-row: span 1;
+}
+.mos9 {
+	grid-column: span 2;
+	grid-row: span 1;
+}
+.storm {
+	position: relative;
+	left: 2.5rem;
+	top: 3.2rem;
+}
+.buttonBox {
+	height: 8rem;
+	width: 20rem;
+	background-color: black;
+	position: relative;
+	top: -63vh;
+	left: calc(50vw - 10rem);
+	border: 2px solid white;
+}
+.merchSect {
+
+	height: 360vh;
+
+}
+.teeSale {
+	transform: translate(0 , 10rem);
+	background-color: rgba(255 , 255, 255 , 1);
+	width: 60vw;
+	height: 80vh;
+	margin: auto;
+	border-radius: 7px;
+	border: 2px solid black;
+}
+
+.tShirt {
+	height: 60vh;
+
+	position: relative;
+	top: 10vh;
+	left: 10vw;
+
+	border: 3px solid black;
+}
+.teeSale h3 {
+	font-size: 3rem;
+	color: red;
+	position: relative;
+	top: -45vh;
+	left: 40vw;
+}
+
+.teeSale h2 {
+	position: relative;
+	font-size: 2rem;
+	font-weight: 600;
+	left: 40vw;
+	top: -50vh;
+	font-family: codeLight, helvetica, sans-serif;
+}
+
+.buttonBox2 {
+	position: relative;
+	left: 39vw;
+	top: -22rem;
+	width: 12rem;
+	height: 5rem;
+}
+.t {
+	position: relative;
+	top: calc(50% - .6rem);
+	left: 1.5rem;
+}
+.merchTypes {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	left: 1.5vw;
+}
+.merchTypes .merchbox {
+	background-color: rgb(255 , 255, 255);
+
+	border: 2px solid black;
+
+	width: 16rem;
+	height: 17rem;
+
+
+	overflow: hidden;
+	position: relative;
+
+	top: 15rem;
+	margin: 2rem;
+}
+.merchBox img {
+	width: 15rem;
+	padding: 1rem 0 0 .5rem;
+}
+
+.merchBox .info {
+	position: relative;
+	top: 1rem;
+	height: 8rem;
+
+	text-align: center;
+
+	padding: 1rem;
+	box-sizing: border-box;
+	border-top: 2px solid black;
+}
+
+
+.merchBox h2 {
+	font-family: codeLight, helvetica, sans-serif;
+	font-weight: 900;
+	border-bottom: 2px solid black;
+}
+.merchBox .button {
+	position: relative;
+	top: 2rem;
+
+	font-size: 1rem;
+}
+.info {
+	transition: .5s all;
+}
+.mug .info {
+	background-color: blue;
+}
+.apparel .info {
+	background-color: green;
+}
+.saucer .info {
+	background-color: yellow;
+}
+.music .info {
+	background-color: red;
+}
+.merchTypes .merchBox:hover .info {
+	animation: info;
+	top: -7rem;
+}
+@keyframes info {
+	from {top: 3rem;}
+	to {top: -7rem;}
+}
+
+
+.posterSect  {
+	position: relative;
+	top: 20rem;
+}
+.posterSect img {
+	position: absolute;
+	box-shadow: 1px 1px 5px gray;
+
+}
+.wYWHPoster {
+	width: 30rem;
+
+	left: -10vw;
+}
+.posterSect .darkPoster {
+	width: 27rem;
+
+  left: 35vw;
+}
+.AHMPoster{
+	width: 27rem;
+
+	left: 75vw;
+
+}
+.posterSect .merchBox .info {
+	position: relative;
+	top: 8rem;
+	left: 60vw;
+	height: 10rem;
+	width: 15rem;
+	background-color: black;
+	text-align: center;
+	padding: 1rem;
+	box-sizing: border-box;
+	border: 2px solid white;
+}
+.postersect h2 {
+	border: none;
+	padding-bottom: 1rem;
+	border-bottom: 2px solid white;
+	color: white;
+}
+.posterSect a {
+	background-color: black;
+}
+
+.customWrapper {
+	background-color: black;
+	width: 100vw;
+
+	position: relative;
+	top: 130vh;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	//grid-column-gap: 50px;
+}
+.customWrapper img {
+	width: 100%;
+
+}
+.customWrapper .bottom {
+	grid-row-start: 3;
+}
+
+
+/*.apparel {
+	left: 26rem;
+}
+
+.saucer {
+	left: 45rem;
+}*/
+
+
+/*for tablets / smaller laptops*/
+@media only screen and (max-width: 1400px) {
+
+}
+/* for tablets */
+@media only screen and (max-width: 1200px) {
+	.fullNav {
+		display: none;
+	}
+	header {
+		height: 70px;
+	}
+	header h1 {
+
+	}
+	.hamburger {
+		display: inline-block;
+		position: absolute;
+		top: 5px;
+		left: 10px;
+	}
+	.share {
+		display: inline-block;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+	}
+	.socialMediaIcons {
+		display: none;
+	}
+	.album {
+		height: 20rem;
+		width: 20rem;
+		margin-left: 9rem;
+	}
+	.wishYouWereHere {
+	    left: calc(50vw - 9rem);
+	}
+	.pulse {
+	    left: calc(100vw - 21rem);
+	}
+	.back h1 {
+		top: 2rem;
+	}
+	.back p {
+		top: 3rem;
+	}
+	.back .line {
+	    position: relative;
+	    top: 2em;
+	    margin: auto;
+	    width: 15em;
+	    height: .1em;
+	    background-color: white;
+	}
+	.albumButton {
+		position: relative;
+	  top: 3em;
+	  width: 10em;
+	}
+	.quote {
+		left: 40vw;
+	}
+	.quoteSect p {
+		font-size: 2rem;
+	}
+	.quoteSect h2 {
+		font-size: 1.8rem;
+	}
+
+	.merchTypes {
+		left: 0;
+	}
+	.wYWHPoster {
+		left: -20vw;
+	}
+	.darkPoster {
+	  left: 35vw;
+	}
+	.AHMPoster{
+		left: 85vw;
+	}
+}
+@media only screen and (max-width: 1055px) {
+
+	.coversSect {
+		height: 110rem;
+		display: block;
+	}
+	.album {
+			top: 30rem;
+	    left: calc(50vw - 10rem);
+			height: 30rem;
+			width: 30rem;
+	}
+	.wishYouWereHere {
+	    top: 70rem;
+	}
+	.pulse {
+	    top: 110rem;
+			margin-bottom: 5rem;
+	}
+	.backContent {
+		transform: translate(0, 5rem);
+	}
+	.quote {
+		top: calc(205vh + 90rem);
+	}
+}
+/*for large landscape phones/ small tablets*/
+@media only screen and (max-width: 900px) {
+	.quoteSect .rainbow {
+		transform: translate(0 , 4rem);
+	}
+	.quoteSect p {
+		font-size: 1.8rem;
+	}
+	.quoteSect h2 {
+		font-size: 1.5rem;
+	}
+	.merchTypes {
+		grid-template-columns: 1fr 1fr;
+		left: 2rem;
+	}
+	.saucer {
+		display: inline-block;
+	}
+}
+	/*.wYWHPoster{
+		display: none;
+	}
+	.AHMPoster {
+		display: none;
+	}
+	.darkPoster {
+		left: calc(50%)
+	}*/
+@media only screen and (max-width: 800px) {
+	.quote {
+		left: 37vw;
+	}
+}
+/*for landscape phones */
+@media only screen and (max-width: 700px) {
+	.quoteSect .rainbow {
+		transform: translate(0 , 10rem);
+	}
+	.quoteSect p {
+		font-size: 1.5rem;
+	}
+	.quoteSect h2 {
+		font-size: 1.3rem;
+	}
+	.merchtypes {
+		left: 0;
+	}
+	.merchtypes .merchbox {
+		width: 13rem;
+		height: 15rem;
+		overflow: hidden;
+	}
+	.merchtypes .merchbox img {
+		width: 12rem;
+	}
+	.merchTypes .merchBox .info {
+		top: 2rem;
+	}
+	.merchTypes .merchBox:hover .info {
+		top: -5rem;
+	}
+	@keyframes info {
+		from {top: 3rem;}
+		to {top: -5rem;}
+	}
+}
+@media only screen and (max-width: 600px) {
+	.coversSect{
+		height: 90rem;
+	}
+	.album {
+		height: 24rem;
+		width: 24rem;
+	}
+	.wishYouWereHere {
+	    top: calc(170vh + 24rem);
+	}
+	.pulse {
+	    top: calc(170vh + 52rem);
+	}
+	.backContent {
+		transform: translate(0, 1rem);
+	}
+	.quote {
+		top: calc(205vh + 70rem);
+	}
+}
+/* for portrait phones */
+@media only screen and (max-width: 400px) {
+
+}
