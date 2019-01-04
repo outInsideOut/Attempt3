@@ -741,10 +741,21 @@ header h1 {
 		width: calc((20rem / 3) * 2);
 		left: calc(50vw - (20rem / 3))
 	}
+	.mosaicContainer {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+		}
+	.mos4 {
+		grid-column: span 4;
+	}
+	 .mos8, .mos9 {
+		 grid-column: span 3;
+	 }
+
 	.storm {
 		left: calc((2.5rem / 3) * 2);
 		top: calc((3.2rem / 3)  * 2);
 	}
+
 }
 /*for large landscape phones/ small tablets*/
 @media only screen and (max-width: 900px) {
