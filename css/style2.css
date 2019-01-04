@@ -154,7 +154,7 @@ header h1 {
 .socialMediaIcons img:hover {
 	opacity: 0.5;
 }
-.wrapper {}
+
 .topSect {
 	background-color: black;
 	height: 100vh;
@@ -168,11 +168,10 @@ header h1 {
 	top: 14vh;
 	left: 10vw;
 }
-
-.coversSect {
-
+.musicWrapper {
+	width: 100vw;
+	overflow-x: hidden;
 }
-
 .coverDiscript h2 {
 	font-family: roboto, sans-serif;
 	position: absolute;
