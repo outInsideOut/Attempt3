@@ -21,6 +21,10 @@ body {
 	background-image: url(../Assets/plainWall.jpg);
 	background-attachment: fixed;
 }
+.musicBody {
+	width: 100vw;
+	overflow-x: hidden;
+}
 header {
 	z-index: 2;
 	background-color: rgba(188, 188, 188, 0.5);
@@ -169,6 +173,8 @@ header h1 {
 	left: 10vw;
 }
 .musicWrapper {
+	position: absolute;
+	height: 100vh;
 	width: 100vw;
 	overflow-x: hidden;
 }
@@ -291,7 +297,7 @@ header h1 {
 	position: relative;
 	top: 37rem;
 	left: calc(50vw - 5em);
-	margin-bottom: 5rem;
+	margin-bottom: 3rem;
 }
 .quoteSect {
 	overflow: hidden;
