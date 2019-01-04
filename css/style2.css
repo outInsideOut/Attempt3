@@ -177,6 +177,7 @@ header h1 {
 	font-family: roboto, sans-serif;
 	position: absolute;
 	top: 8rem;
+	width: 6rem;
 	padding: 5px 1rem;
 	left: calc(50vw - 4rem);
 	background-color: black;
@@ -697,6 +698,10 @@ header h1 {
 	}
 	:root {
 		font-size: 24px;
+	}
+	.hamburger {
+		top: .5rem;
+		height: 3rem;
 	}
 	.coversSect {
 		height: 110rem;
