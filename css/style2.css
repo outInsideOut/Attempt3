@@ -730,7 +730,7 @@ header h1 {
 		transform: translate(0, 5rem);
 	}
 	.seeMore {
-		top: 150rem;
+		top: 115rem;
 	}
 	.quote {
 		top: calc(205vh + 90rem);
