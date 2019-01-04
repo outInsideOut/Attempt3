@@ -688,8 +688,9 @@ header h1 {
 	}
 }
 @media only screen and (max-width: 1055px) {
-	: root {
+	:root {
 		font-size: 24px;
+
 	}
 	.coversSect {
 		height: 110rem;
