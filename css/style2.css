@@ -724,7 +724,7 @@ header h1 {
 		transform: translate(0, 5rem);
 	}
 	.seeMore {
-		top: 115rem;
+		top: 150rem;
 	}
 	.quote {
 		top: calc(205vh + 90rem);
@@ -800,9 +800,7 @@ header h1 {
 	}
 }
 @media only screen and (max-width: 600px) {
-	.coversSect{
-		height: 90rem;
-	}
+
 	.album {
 		height: 24rem;
 		width: 24rem;
@@ -820,7 +818,7 @@ header h1 {
 		transform: translate(0, 1rem);
 	}
 	.seeMore {
-		top: 97rem;
+		top: 95rem;
 	}
 	.quote {
 		top: calc(205vh + 70rem);
