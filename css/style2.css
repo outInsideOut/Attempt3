@@ -21,7 +21,7 @@ body {
 	background-image: url(../Assets/plainWall.jpg);
 	background-attachment: fixed;
 }
-.musicBody, .galleryBody {
+body {
 	width: 100vw;
 	overflow-x: hidden;
 }
