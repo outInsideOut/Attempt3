@@ -545,27 +545,21 @@ header h1 {
 .posterSect  {
 	position: relative;
 	top: 10rem;
-
-	
 }
 .posterSect img {
 	position: absolute;
 	box-shadow: 1px 1px 5px gray;
-
 }
 .wYWHPoster {
 	width: 30rem;
-
 	left: -10vw;
 }
 .posterSect .darkPoster {
 	width: 27rem;
-
   left: 35vw;
 }
 .AHMPoster{
 	width: 27rem;
-
 	left: 75vw;
 
 }
@@ -775,17 +769,17 @@ header h1 {
 	.merchBox img {
 		width: calc((15rem / 3) * 2);
 	}
-	.wYWHPoster {
-		left: -20vw;
-		width: calc((30rem / 3)* 2);
+	.wYWHPoster{
+		display: none;
 	}
-	.postersect .darkPoster {
-	  left: 35vw;
-		width: calc((27rem / 3) * 2);
+	.AHMPoster {
+		display: none;
 	}
-	.AHMPoster{
-		left: 85vw;
-		width: calc((27rem / 3) * 2);
+	.posterSect .darkPoster {
+		left: 2rem;
+	}
+	.posterSect .merchBox .info {
+		left: 55vw;
 	}
 }
 /*for large landscape phones/ small tablets*/
@@ -805,18 +799,7 @@ header h1 {
 	.mug {
 		display: block;
 	}
-	.wYWHPoster{
-		display: none;
-	}
-	.AHMPoster {
-		display: none;
-	}
-	.posterSect .darkPoster {
-		left: 2rem;
-	}
-	.posterSect .merchBox .info {
-		left: 55vw;
-	}
+
 }
 @media only screen and (max-width: 800px) {
 	:root {
