@@ -175,7 +175,7 @@ header h1 {
 .coverDiscript h2 {
 	font-family: roboto, sans-serif;
 	position: absolute;
-	top: 20vh;
+	top: 8rem;
 	padding: 5px 1rem;
 	left: calc(50vw - 4rem);
 	background-color: black;
@@ -189,7 +189,7 @@ header h1 {
     width: 24rem;
     /*positioning*/
     position: absolute;
-    top: 60vh;
+    top: 25rem;
     margin-left: 12rem;
     transform: translate( -50% , -50%);
     /*FLIP EFFECT*/
@@ -287,7 +287,9 @@ header h1 {
 	width: 10em;
 	background-color: black;
 	position: relative;
-	/* top: 50rem; */
+	top: 37rem;
+	left: calc(50vw - 5em);
+	margin-bottom: 5rem;
 }
 .quoteSect {
 	overflow: hidden;
@@ -693,19 +695,22 @@ header h1 {
 	}
 	.album {
 			top: 30rem;
-	    left: calc(50vw - 10rem);
+	    left: calc(50vw - 9rem);
 			height: 30rem;
 			width: 30rem;
 	}
 	.wishYouWereHere {
-	    top: 70rem;
+	    top: 65rem;
 	}
 	.pulse {
-	    top: 110rem;
+	    top: 100rem;
 			margin-bottom: 5rem;
 	}
 	.backContent {
 		transform: translate(0, 5rem);
+	}
+	.seeMore {
+		top: 115rem;
 	}
 	.quote {
 		top: calc(205vh + 90rem);
@@ -785,14 +790,20 @@ header h1 {
 		height: 24rem;
 		width: 24rem;
 	}
+	.darkSide {
+		top: 25rem;
+	}
 	.wishYouWereHere {
-	    top: calc(170vh + 24rem);
+	    top: 55rem;
 	}
 	.pulse {
-	    top: calc(170vh + 52rem);
+	    top: 85rem;
 	}
 	.backContent {
 		transform: translate(0, 1rem);
+	}
+	.seeMore {
+		top: 97rem;
 	}
 	.quote {
 		top: calc(205vh + 70rem);
