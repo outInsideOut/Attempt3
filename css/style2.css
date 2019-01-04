@@ -28,6 +28,11 @@ body {
 	height: 100vh;
 	overflow-y: hidden;
 }
+.storeBody {
+	height: 200vh;
+	width: 100vh;
+	overflow: hidden;
+}
 header {
 	height: 5rem;
 	z-index: 2;
@@ -542,7 +547,7 @@ header h1 {
 	top: 10rem;
 
 	width: 100vw;
-	
+
 }
 .posterSect img {
 	position: absolute;
