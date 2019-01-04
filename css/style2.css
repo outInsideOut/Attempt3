@@ -125,6 +125,7 @@ nav li.last a:hover {
 .dropNav a {
 	color: #444;
 	transition: .3s ease-in-out;
+	font-size: 2rem;
 }
 .dropNav a:hover {
 	color: white;
@@ -691,6 +692,9 @@ header h1 {
 	header {
 		height: 5rem;
 	}
+	header h1 {
+		font-size: 2rem;
+	}
 	:root {
 		font-size: 24px;
 	}
@@ -750,6 +754,9 @@ header h1 {
 		left: calc(50%)
 	}*/
 @media only screen and (max-width: 800px) {
+	:root {
+		font-size: 20px;
+	}
 	.quote {
 		left: 37vw;
 	}
