@@ -699,11 +699,9 @@ header h1 {
 	  left: 35vw;
 
 	}
-	.AHMPoster{
+	.AHMPoster {
 		left: 85vw;
-
 	}
-}
 @media only screen and (max-width: 1055px) {
 	header {
 		height: 5rem;
@@ -807,9 +805,13 @@ header h1 {
 	.AHMPoster {
 		display: none;
 	}
-	.darkPoster {
-		left: calc(50%)
+	.posterSect .darkPoster {
+		left: 2rem;
 	}
+	.posterSect .merchBox .info {
+		left: 55vw;
+	}
+}
 @media only screen and (max-width: 800px) {
 	:root {
 		font-size: 20px;
