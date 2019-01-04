@@ -21,9 +21,13 @@ body {
 	background-image: url(../Assets/plainWall.jpg);
 	background-attachment: fixed;
 }
-.musicBody {
+.musicBody, .galleryBody {
 	width: 100vw;
 	overflow-x: hidden;
+}
+.galleryBody {
+	height: 100vh;
+	overflow-y: hidden;
 }
 header {
 	height: 5rem;
@@ -747,10 +751,9 @@ header h1 {
 	.mos4 {
 		grid-column: span 4;
 	}
-	 .mos8, .mos9 {
+	.mos8, .mos9 {
 		 grid-column: span 3;
 	 }
-
 	.storm {
 		left: calc((2.5rem / 3) * 2);
 		top: calc((3.2rem / 3)  * 2);
