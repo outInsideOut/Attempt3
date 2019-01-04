@@ -61,6 +61,8 @@ a {
 .button:hover{
    background-color: white;
    color: #333;
+	 border: 2px solid black;
+	 cursor: pointer;
 }
 .button:hover a {
 	color: black;
@@ -412,11 +414,8 @@ header h1 {
 	left: calc(50vw - 10rem);
 	border: 2px solid white;
 }
-.merchSect {
 
-	height: 360vh;
 
-}
 .teeSale {
 	transform: translate(0 , 10rem);
 	background-color: rgba(255 , 255, 255 , 1);
@@ -426,7 +425,6 @@ header h1 {
 	border-radius: 7px;
 	border: 2px solid black;
 }
-
 .tShirt {
 	height: 60vh;
 
@@ -443,7 +441,6 @@ header h1 {
 	top: -45vh;
 	left: 40vw;
 }
-
 .teeSale h2 {
 	position: relative;
 	font-size: 2rem;
@@ -452,7 +449,6 @@ header h1 {
 	top: -50vh;
 	font-family: codeLight, helvetica, sans-serif;
 }
-
 .buttonBox2 {
 	position: relative;
 	left: 39vw;
@@ -465,11 +461,12 @@ header h1 {
 	top: calc(50% - .6rem);
 	left: 1.5rem;
 }
+
 .merchTypes {
+	width: 100vw;
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	left: 1.5vw;
 }
 .merchTypes .merchbox {
 	background-color: rgb(255 , 255, 255);
@@ -483,8 +480,9 @@ header h1 {
 	overflow: hidden;
 	position: relative;
 
-	top: 15rem;
-	margin: 2rem;
+	top: 5rem;
+	left: calc(50% - 8rem);
+	margin-bottom: 2rem;
 }
 .merchBox img {
 	width: 15rem;
@@ -688,7 +686,10 @@ header h1 {
 	}
 
 	.merchTypes {
-		left: 0;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.mug {
+		display: none;
 	}
 	.wYWHPoster {
 		left: -20vw;
@@ -758,7 +759,15 @@ header h1 {
 		left: calc((2.5rem / 3) * 2);
 		top: calc((3.2rem / 3)  * 2);
 	}
+	.merchTypes .merchBox {
+		width: calc((16rem / 3) * 2);
+		height: calc((17rem / 3) * 2);
 
+		left: calc(50% - (16rem / 3));
+	}
+	.merchBox img {
+		width: calc((15rem / 3) * 2);
+	}
 }
 /*for large landscape phones/ small tablets*/
 @media only screen and (max-width: 900px) {
@@ -773,12 +782,10 @@ header h1 {
 	}
 	.merchTypes {
 		grid-template-columns: 1fr 1fr;
-		left: 2rem;
 	}
-	.saucer {
-		display: inline-block;
+	.mug {
+		display: block;
 	}
-}
 	/*.wYWHPoster{
 		display: none;
 	}
@@ -807,22 +814,12 @@ header h1 {
 	.quoteSect h2 {
 		font-size: 1.3rem;
 	}
-	.merchtypes {
-		left: 0;
-	}
-	.merchtypes .merchbox {
-		width: 13rem;
-		height: 15rem;
-		overflow: hidden;
-	}
-	.merchtypes .merchbox img {
-		width: 12rem;
-	}
+
 	.merchTypes .merchBox .info {
 		top: 2rem;
 	}
 	.merchTypes .merchBox:hover .info {
-		top: -5rem;
+		top: -6.5rem;
 	}
 	@keyframes info {
 		from {top: 3rem;}
