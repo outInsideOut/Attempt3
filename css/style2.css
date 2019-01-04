@@ -693,12 +693,15 @@ header h1 {
 	}
 	.wYWHPoster {
 		left: -20vw;
+
 	}
-	.darkPoster {
+	.postersect .darkPoster {
 	  left: 35vw;
+
 	}
 	.AHMPoster{
 		left: 85vw;
+
 	}
 }
 @media only screen and (max-width: 1055px) {
@@ -768,6 +771,18 @@ header h1 {
 	.merchBox img {
 		width: calc((15rem / 3) * 2);
 	}
+	.wYWHPoster {
+		left: -20vw;
+		width: calc((30rem / 3)* 2);
+	}
+	.postersect .darkPoster {
+	  left: 35vw;
+		width: calc((27rem / 3) * 2);
+	}
+	.AHMPoster{
+		left: 85vw;
+		width: calc((27rem / 3) * 2);
+	}
 }
 /*for large landscape phones/ small tablets*/
 @media only screen and (max-width: 900px) {
@@ -786,7 +801,7 @@ header h1 {
 	.mug {
 		display: block;
 	}
-	/*.wYWHPoster{
+	.wYWHPoster{
 		display: none;
 	}
 	.AHMPoster {
@@ -794,7 +809,7 @@ header h1 {
 	}
 	.darkPoster {
 		left: calc(50%)
-	}*/
+	}
 @media only screen and (max-width: 800px) {
 	:root {
 		font-size: 20px;
