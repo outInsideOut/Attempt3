@@ -367,10 +367,10 @@ header h1 {
 	-moz-transform: scale(1.1);
 	-o-transform: scale(1.1);
 }
-#shufflebttn {
+#shuffleBttn {
 	height: 50px;
 	width: 50px;
-	background-color: rgba(0, 0, 0, 0.1);
+	background-color: rgba(255, 255, 255, 0.3);
 	position: absolute;
 	top: 5rem;
 	right: 0;
