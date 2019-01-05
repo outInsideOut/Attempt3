@@ -436,9 +436,15 @@ header h1 {
   width: 10rem;
   position: absolute;
 	top: calc(50vh - 5rem);
+	border: 2px solid lightgrey;
 }
-.left {
-  background-color: red;
+.chevron img {
+	width: 10rem;
+	height: 10rem;
+}
+
+.left img {
+	transform: rotate(180deg);
 }
 .imageBox {
     height: 80vh;
@@ -449,10 +455,11 @@ header h1 {
 	position: absolute;
 	display: none;
   height: 100vh;
+	max-width: 100vw;
 	top: 0;
 }
 .right {
-  background-color: green;
+  /* background-color: green; */
   right: 0;
 }
 .closeBttn {
@@ -805,6 +812,10 @@ header h1 {
 	.storm {
 		left: calc((2.5rem / 3) * 2);
 		top: calc((3.2rem / 3)  * 2);
+	}
+	#imgBox img {
+		width: 100vw;
+		height: auto;
 	}
 	.merchTypes .merchBox {
 		width: calc((16rem / 3) * 2);

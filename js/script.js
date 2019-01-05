@@ -10,7 +10,7 @@ $(document).ready(function(){
     side.style.width = "0";
   });
 
-
+  var windowWidth = window.innerWidth;
   //fullscreen gallery
   var imgCounter = 1;
   var lastImg;
@@ -66,11 +66,14 @@ $(document).ready(function(){
     // make sure img is loaded
     $(img).delay(300).ready(function(){
       //set var width to width of image
-      width = $(img).width();
-      console.log(width);
-      //center image using width var
-      var left = "calc(50vw - "+parseInt(width/2)+"px)";
-      $(img).css("left" , left);
+      // if (windowWidth > 1055)
+      // {
+        width = $(img).width();
+        console.log(width);
+        //center image using width var
+        var left = "calc(50vw - "+parseInt(width/2)+"px)";
+        $(img).css("left" , left);
+      // }
       //fade image in over 0.3secs
       $(img).fadeIn(300);
 
