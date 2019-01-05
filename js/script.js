@@ -10,6 +10,52 @@ $(document).ready(function(){
     side.style.width = "0";
   });
 
+
+  //shuffle mosaic
+  $(shuffleBttn).click(function(){
+    var rndm = 0;
+    var mosaicContents = [];
+    console.log("running");
+    //loops through each tile of mosaic
+    for (var i = 1; i < 10; i++) {
+      var checker = true;
+      console.log("still running");
+      //checks to see if image already picked
+      while (checker == true)
+      {
+        console.log("long running");
+        //new random number
+        rndm = Math.floor((Math.random() * 16) + 1);
+
+
+        checker = false;
+        //checks array for number
+        if (i > 1)
+        {
+          $.each(mosaicContents, function(index, num)
+          {
+            if (rndm == num)
+            {
+              console.log("repeated number random, executed again");
+              checker = true;
+            }
+          })
+        }
+      }
+      //add random nuber to array if it isn't there already
+      mosaicContents.push(rndm);
+      console.log("adding: "+rndm);
+      var tile = ".mos"+i;
+      $(tile).empty();
+      $(tile).html("<img src='Assets/slider/img"+rndm+".jpg' class='tile' id='"+rndm+"'>");
+    };
+    $.each( mosaicContents, function(index, num)
+    {
+
+      console.log(num);
+    });
+  })
+
   var windowWidth = window.innerWidth;
   //fullscreen gallery
   var imgCounter = 1;
@@ -18,7 +64,8 @@ $(document).ready(function(){
   // if tile clicked
   $('.tile').click(function(){
     console.log("clicked");
-    imgCounter = parseInt(this.id);
+    imgCounter = parseInt($(this).children("img").attr("id"));
+    console.log(imgCounter);
     changeImage();
     //changes the display value so that gallery appears
     $("#gallery").fadeIn(300);
@@ -28,10 +75,10 @@ $(document).ready(function(){
     console.log("left clicked");
     imgCounter -= 1;
     if (imgCounter == 0){
-      imgCounter = 9;
+      imgCounter = 16;
     };
     lastImg = "#img"+parseInt(imgCounter + 1);
-    if (imgCounter == 9) {
+    if (imgCounter == 16) {
       lastImg = "#img1";
     }
     changeImage();
@@ -42,14 +89,15 @@ $(document).ready(function(){
     //increase counter
     imgCounter += 1;
     //loop around if last image
-    if (imgCounter == 10){
+    if (imgCounter == 17){
       imgCounter = 1
     };
     //close last image
     lastImg = "#img"+parseInt(imgCounter - 1);
     if (imgCounter == 1) {
-      lastImg = "#img9";
+      lastImg = "#img16";
     }
+    console.log("imgCounter="+imgCounter);
     changeImage();
   });
   //close button close gallery and last image
@@ -87,5 +135,7 @@ $(document).ready(function(){
 
   });
 
-};
+  };
+
+
 });

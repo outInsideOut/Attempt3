@@ -367,7 +367,19 @@ header h1 {
 	-moz-transform: scale(1.1);
 	-o-transform: scale(1.1);
 }
-
+#shufflebttn {
+	height: 50px;
+	width: 50px;
+	background-color: rgba(0, 0, 0, 0.1);
+	position: absolute;
+	top: 5rem;
+	right: 0;
+	z-index: 4;
+}
+#shuffleBttn img {
+	height: 50px;
+	width: 50px;
+}
 .mos1 {
 	grid-column: span 2;
 	grid-row: span 1;
@@ -465,7 +477,7 @@ header h1 {
 	position: absolute;
 	right: 0;
 }
-.closeBttn img {
+#gallery .closeBttn img {
 	position: absolute;
 	top: 20px;
 	right: 20px;
