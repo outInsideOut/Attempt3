@@ -75,6 +75,7 @@ $(document).ready(function(){
         var left = "calc(50vw - "+parseInt(width/2)+"px)";
         var top = "calc(50vh - "+parseInt(height/2)+"px)";
         $(img).css("left" , left);
+        //if smaller screen then positions vertical centre
         if (windowWidth < 1055){
           console.log("smallScreen");
           $(img).css("top" , top);

@@ -436,13 +436,12 @@ header h1 {
   width: 10rem;
   position: absolute;
 	top: calc(50vh - 5rem);
-	border: 2px solid lightgrey;
+
 }
 .chevron img {
-	width: 10rem;
+	width: 5rem;
 	height: 10rem;
 }
-
 .left img {
 	transform: rotate(180deg);
 }
@@ -461,9 +460,6 @@ header h1 {
 .right {
   /* background-color: green; */
   right: 0;
-}
-.closeBttn {
-
 }
 .closeBttn img {
 	position: absolute;
