@@ -58,6 +58,7 @@ $(document).ready(function(){
   });
 
   var width = 0;
+  var height = 0;
   function changeImage(){
     img = "#img"+parseInt(imgCounter);
     //fadeout previous image
@@ -66,14 +67,18 @@ $(document).ready(function(){
     // make sure img is loaded
     $(img).delay(300).ready(function(){
       //set var width to width of image
-      // if (windowWidth > 1055)
-      // {
+
         width = $(img).width();
+        height = $(img).height();
         console.log(width);
         //center image using width var
         var left = "calc(50vw - "+parseInt(width/2)+"px)";
+        var top = "calc(50vh - "+parseInt(height/2)+"px)";
         $(img).css("left" , left);
-      // }
+        if (windowWidth < 1055){
+          console.log("smallScreen");
+          $(img).css("top" , top);
+        }
       //fade image in over 0.3secs
       $(img).fadeIn(300);
 
