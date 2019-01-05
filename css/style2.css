@@ -461,6 +461,10 @@ header h1 {
   /* background-color: green; */
   right: 0;
 }
+.right img {
+	position: absolute;
+	right: 0;
+}
 .closeBttn img {
 	position: absolute;
 	top: 20px;
