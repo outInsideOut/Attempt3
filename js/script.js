@@ -45,18 +45,20 @@ $(document).ready(function(){
     if (imgCounter == 10){
       imgCounter = 1
     };
+    //close last image
     lastImg = "#img"+parseInt(imgCounter - 1);
     if (imgCounter == 1) {
       lastImg = "#img9";
     }
     changeImage();
   });
-  //close button close gallery
+  //close button close gallery and last image
   $("#close").click(function(){
     $("#gallery").fadeOut(300);
     $(img).css("display", "none");
   });
 
+  //stores height and width of images
   var width = 0;
   var height = 0;
   function changeImage(){
