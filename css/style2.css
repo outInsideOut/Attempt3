@@ -843,6 +843,12 @@ header h1 {
 	.mosaicContainer {
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 		}
+	#refreshBttn {
+		right: 200px;
+	}
+	#saveBttn {
+		right: 100px;
+	}
 	.mos4 {
 		grid-column: span 4;
 	}
