@@ -380,8 +380,9 @@ header h1 {
 	background-color: rgba(255, 255, 255, 0.3);
 	position: absolute;
 	border-radius: 5px;
-	z-index: 4;
+	z-index: 1;
 	transition: 0.5s all;
+	display: block;
 }
 .miniButtons img {
 	height: 50px;
@@ -453,8 +454,8 @@ header h1 {
 	height: 8rem;
 	width: 20rem;
 	background-color: black;
-	position: relative;
-	top: -50vh;
+	position: absolute;
+	top: calc(50vh - 2rem);
 	left: calc(50vw - 10rem);
 	border: 2px solid white;
 }

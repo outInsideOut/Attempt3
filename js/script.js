@@ -5,17 +5,21 @@ $(document).ready(function(){
   $(".hamburger").click(function(){
     console.log("clicked");
     side.style.width = "100vw";
+    //hide miniButtons in gallery due to overlay problem
+    $(".miniButtons").css("display", "none");
   });
   $("#closeBttn").click(function(){
+    //squish menu to left
     side.style.width = "0";
+    //bring back minibuttons in gallery
+    $("#shuffleBttn, #fullBttn").css("display", "block");
   });
 
   var isFullScreen = false;
   //mosaic fullscreen
   $("#fullBttn").click(function(){
-    // $(".mosaicContainer").css("height" , "100vh");
     if (isFullScreen == false) {
-
+      $(".miniButtons").css("z-index" , "4");
       $(".mosaicContainer").animate({
         top: "0rem",
         height: "100vh"
@@ -39,9 +43,10 @@ $(document).ready(function(){
       });
       $("#refreshBttn").fadeOut();
       $("#saveBttn").fadeOut();
+      $(".miniButtons").css("z-index" , "3");
       setTimeout(function(){
         $(".mosaicContainer").css({
-          "z-index": "1"
+          "z-index": "0"
           // "height": "calc(100vh - 5rem)"
         });
       }, 340);
