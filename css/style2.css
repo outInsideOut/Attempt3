@@ -399,10 +399,12 @@ header h1 {
 	right: 0.5rem;
 }
 #saveBttn {
+	display: none;
 	top: 0.5rem;
 	right: -5rem;
 }
 #refreshBttn {
+	display: none;
 	top: 0.5rem;
 	right: -5rem;
 }

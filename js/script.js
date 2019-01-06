@@ -28,6 +28,8 @@ $(document).ready(function(){
       $("#refreshBttn").animate({
         right: "75px"
       });
+      $("#refreshBttn").css("display" , "block")
+
       $("#saveBttn").animate({
         right: "0.5rem"
       });
