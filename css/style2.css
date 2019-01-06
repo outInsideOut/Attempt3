@@ -344,6 +344,8 @@ header h1 {
 .mosaicContainer {
 	height: calc(100vh - 5rem);
 	display: grid;
+	position: absolute;
+	top: 5rem;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .mosaicContainer div {
@@ -367,18 +369,37 @@ header h1 {
 	-moz-transform: scale(1.1);
 	-o-transform: scale(1.1);
 }
-#shuffleBttn {
+.miniButtons {
 	height: 50px;
 	width: 50px;
 	background-color: rgba(255, 255, 255, 0.3);
 	position: absolute;
-	top: 5rem;
-	right: 0;
+	border-radius: 5px;
 	z-index: 4;
+	transition: 0.5s all;
 }
-#shuffleBttn img {
+.miniButtons img {
 	height: 50px;
 	width: 50px;
+}
+.miniButtons:hover {
+	cursor: pointer;
+}
+#shuffleBttn {
+	top: 5.5rem;
+	right: 0.5rem;
+}
+#fullBttn {
+	bottom: 0.5rem;
+	right: 0.5rem;
+}
+#saveBttn {
+	top: 0.5rem;
+	right: -5rem;
+}
+#refreshBttn {
+	top: 0.5rem;
+	right: -5rem;
 }
 .mos1 {
 	grid-column: span 2;
@@ -828,6 +849,14 @@ header h1 {
 	#imgBox img {
 		width: 100vw;
 		height: auto;
+	}
+	.miniButtons {
+		height: 70px;
+		width: 70px;
+	}
+	.miniButtons img {
+		height: 70px;
+		width: 70px;
 	}
 	.merchTypes .merchBox {
 		width: calc((16rem / 3) * 2);

@@ -10,11 +10,60 @@ $(document).ready(function(){
     side.style.width = "0";
   });
 
+  var isFullScreen = false;
+  //mosaic fullscreen
+  $("#fullBttn").click(function(){
+    // $(".mosaicContainer").css("height" , "100vh");
+    if (isFullScreen == false) {
 
+      $(".mosaicContainer").animate({
+        top: "0rem",
+        height: "100vh"
+      });
+      $(".mosaicContainer").css("z-index", "3");
+      $("#shuffleBttn").animate({
+        top: "0.5rem",
+        right: "140px"
+      });
+      $("#refreshBttn").animate({
+        right: "75px"
+      });
+      $("#saveBttn").animate({
+        right: "0.5rem"
+      });
+      $(".mosaicContainer img").css("opacity", "1" );
+      isFullScreen = true;
+    }
+    else {
+      $("#shuffleBttn").animate({
+        top: "5.5rem",
+        right: ".5rem"
+      });
+      $(".mosaicContainer").animate({
+        top: "5rem",
+        height: "-=5rem"
+      });
+      $("#refreshBttn").animate({
+        right: "-5rem"
+      });
+      $("#saveBttn").animate({
+        right: "-5rem"
+      });
+      setTimeout(function(){
+        $(".mosaicContainer").css({
+          "z-index": "1"
+          // "height": "calc(100vh - 5rem)"
+        });
+      }, 340);
+      $(".mosaicContainer img").css("opacity", "0.8" );
+      isFullScreen = false;
+    };
+  });
+var mosaicContents;
   //shuffle mosaic
-  $(shuffleBttn).click(function(){
+  $("#shuffleBttn").click(function(){
     var rndm = 0;
-    var mosaicContents = [];
+    mosaicContents = [];
     console.log("running");
     //loops through each tile of mosaic
     for (var i = 1; i < 10; i++) {
@@ -26,8 +75,6 @@ $(document).ready(function(){
         console.log("long running");
         //new random number
         rndm = Math.floor((Math.random() * 16) + 1);
-
-
         checker = false;
         //checks array for number
         if (i > 1)
@@ -51,10 +98,46 @@ $(document).ready(function(){
     };
     $.each( mosaicContents, function(index, num)
     {
-
       console.log(num);
     });
-  })
+    //if fullscreen keep images opaque
+    if (isFullScreen == true) {
+      $(".mosaicContainer img").css("opacity", "1" );
+    };
+  });
+
+  //save button
+  $("#saveBttn").click(function(){
+    //parse js array to json array
+    var mosaicLocations = JSON.stringify(mosaicContents);
+    //save json array to local storage
+    localStorage.setItem("mosaic", mosaicLocations);
+  });
+  //refresh array
+  $("#refreshBttn").click(function(){
+    console.log("clicked");
+    localStorage.removeItem("mosaic");
+    //refreshes page
+    location.reload();
+  });
+  //to load saved mosaic
+  $(document).ready(function(){
+    //check for localStorage
+    if(localStorage.getItem("mosaic") != null) {
+      console.log("Saved mosaic loaded");
+      //parse json array back to js[]
+      mosaicContents = JSON.parse(localStorage.getItem("mosaic"))
+      //loop through the parsed array and load images into mosaic
+      var i = 1;
+      $.each(mosaicContents, function(index, num)
+      {
+        var tile = ".mos"+i;
+        $(tile).empty();
+        $(tile).html("<img src='Assets/slider/img"+num+".jpg' class='tile' id='"+num+"'>");
+        i++;
+      });
+    };
+  });
 
   var windowWidth = window.innerWidth;
   //fullscreen gallery
