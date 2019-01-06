@@ -310,6 +310,8 @@ header h1 {
 	left: calc(50vw - 5em);
 	margin-bottom: 3rem;
 }
+
+
 .quoteSect {
 	overflow: hidden;
 	background-color: black;
@@ -337,6 +339,8 @@ header h1 {
 	font-size: 2rem;
 	color: lightgrey;
 }
+
+
 .mosaicSect {
 	height: 110vh;
 	background-color: black;
@@ -384,6 +388,10 @@ header h1 {
 	transition: 0.5s all;
 	display: block;
 }
+.miniButtons:hover {
+	background-color: white;
+	box-shadow: 0 0 5px black;
+}
 .miniButtons img {
 	height: 50px;
 	width: 50px;
@@ -408,6 +416,9 @@ header h1 {
 	display: none;
 	top: 0.5rem;
 	right:140px;
+}
+.tile {
+	cursor: pointer;
 }
 .mos1 {
 	grid-column: span 2;
@@ -810,6 +821,13 @@ header h1 {
 		top: .5rem;
 		height: 3rem;
 	}
+	.topSect iframe {
+		top: 8rem;
+		width: 80vw;
+		height: 30vw;
+		left: 10vw;
+
+	}
 	.coversSect {
 		height: 110rem;
 		display: block;
@@ -862,7 +880,6 @@ header h1 {
 	}
 	#imgBox img {
 		width: 100vw;
-		height: auto;
 	}
 	.miniButtons {
 		height: 70px;

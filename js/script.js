@@ -148,7 +148,7 @@ var mosaicContents;
     //changes the display value so that gallery appears
     $("#gallery").fadeIn(300);
   });
-
+  //event listener for if left button clicked
   $("#left").click(function(){
     console.log("left clicked");
     imgCounter -= 1;
@@ -187,6 +187,7 @@ var mosaicContents;
   //stores height and width of images
   var width = 0;
   var height = 0;
+  //function to chnge image when buttons are clicked
   function changeImage(){
     img = "#img"+parseInt(imgCounter);
     //fadeout previous image
