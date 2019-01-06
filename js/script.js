@@ -22,35 +22,23 @@ $(document).ready(function(){
       });
       $(".mosaicContainer").css("z-index", "3");
       $("#shuffleBttn").animate({
-        top: "0.5rem",
-        right: "140px"
+        top: "0.5rem"
       });
-      $("#refreshBttn").animate({
-        right: "75px"
-      });
-      $("#refreshBttn").css("display" , "block")
-
-      $("#saveBttn").animate({
-        right: "0.5rem"
-      });
+      $("#refreshBttn").fadeIn();
+      $("#saveBttn").fadeIn();
       $(".mosaicContainer img").css("opacity", "1" );
       isFullScreen = true;
     }
     else {
       $("#shuffleBttn").animate({
-        top: "5.5rem",
-        right: ".5rem"
+        top: "5.5rem"
       });
       $(".mosaicContainer").animate({
         top: "5rem",
         height: "-=5rem"
       });
-      $("#refreshBttn").animate({
-        right: "-5rem"
-      });
-      $("#saveBttn").animate({
-        right: "-5rem"
-      });
+      $("#refreshBttn").fadeOut();
+      $("#saveBttn").fadeOut();
       setTimeout(function(){
         $(".mosaicContainer").css({
           "z-index": "1"
