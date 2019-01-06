@@ -369,6 +369,11 @@ header h1 {
 	-moz-transform: scale(1.1);
 	-o-transform: scale(1.1);
 }
+#miniButtonsBox {
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+}
 .miniButtons {
 	height: 50px;
 	width: 50px;
