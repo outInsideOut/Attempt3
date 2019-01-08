@@ -220,11 +220,45 @@ header h1 {
 .customWrapper {
 	height: 30rem;
 }
+.customDescript {
+	position: relative;
+	top: 12.5rem;
+	left: 5rem;
+	width: 40vw;
+	padding: 1rem;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+.customDescript h2 {
+	font-size: 2.5rem;
+	font-family: codeLight, sans-serif;
+	margin-bottom: 1rem;
+}
+.customDescript p {
+	font-family: roboto, sans-serif;
+	font-size: 1.5rem;
+
+}
+.allTheDarkSides {
+	position: relative;
+	margin: 2rem;
+	left: 50vw;
+	top: -10rem;
+	width: 45vw;
+	height: calc(45vw * 2/3);
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.allTheDarkSides img {
+	width: 100%;
+	height: 100%;
+}
 .customWrapper .buttonBox {
 	display: inline-block;
-	position: relative;
-	left: 60%;
-	top: 12rem;
+	position: absolute;
+	height: 6rem;
+	width: 20rem;
+	left: calc(50% - 10rem);
+	top: calc(50%  - 3rem);
 }
 .customWrapper .button {
 	width: 3rem;
@@ -232,6 +266,8 @@ header h1 {
 	top: calc(50% - 1rem);
 	left: calc(50% - 6rem);
 }
+
+
 .musicWrapper {
 	position: absolute;
 	height: 100vh;
@@ -1070,6 +1106,34 @@ h3.first {
 		left: 10vw;
 
 	}
+	.quoteSect {
+		height: 40rem;
+	}
+	.quote {
+		top: 50rem;
+		font-size: 2rem;
+	}
+	.rainbow {
+		position: relative;
+		top: 12rem;
+	}
+	.customDescript {
+		width: 80vw;
+		left: 10vw;
+		top: 5rem;
+		box-sizing: border-box;
+	}
+	.allTheDarkSides {
+		width: 80vw;
+		height: calc(80vw * 2 / 3);
+		left: 10vw;
+		top: 9rem;
+		margin: 0;
+	}
+.customWrapper .button {
+	left: calc((7.5rem / 3) * 2);
+	top: calc((3.2rem / 3)  * 2);
+}
 	.coversSect {
 		height: 110rem;
 		display: block;
@@ -1093,13 +1157,6 @@ h3.first {
 	.seeMore {
 		top: 115rem;
 	}
-	.quoteSect {
-		height: 40rem;
-	}
-	.quote {
-		top: 50rem;
-
-	}
 	.buttonBox {
 		height: calc((8rem / 3) * 2);
 		width: calc((20rem / 3) * 2);
@@ -1121,7 +1178,7 @@ h3.first {
 		 grid-column: span 3;
 	 }
 	.storm {
-		left: calc((2.5rem / 3) * 2);
+		left: calc((4rem / 3) * 2);
 		top: calc((3.2rem / 3)  * 2);
 	}
 	#imgBox img {
