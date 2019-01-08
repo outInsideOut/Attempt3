@@ -160,7 +160,6 @@ header h1 {
 	font-size: 2rem;
 	font-weight: 900;
 	letter-spacing: .3rem;
-
 	text-align: center;
 }
 .socialMediaIcons {
@@ -1092,6 +1091,7 @@ h3.first {
 	}
 	header h1 {
 		font-size: 2rem;
+
 	}
 	:root {
 		font-size: 24px;
@@ -1263,6 +1263,9 @@ h3.first {
 }
 /*for large landscape phones/ small tablets*/
 @media only screen and (max-width: 900px) {
+	header {
+		height: 7rem;
+	}
 	.quoteSect .rainbow {
 		transform: translate(0 , 4rem);
 	}
