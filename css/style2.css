@@ -1150,7 +1150,7 @@ h3.first {
 	}
 @media only screen and (max-width: 1055px) {
 	header {
-		height: 5rem;
+		height: 7rem;
 	}
 	header h1 {
 		font-size: 2rem;
@@ -1247,7 +1247,7 @@ h3.first {
 		 grid-column: span 3;
 	 }
 	.storm {
-		left: calc((4rem / 3) * 2);
+		left: calc((3rem / 3) * 2);
 		top: calc((3.2rem / 3)  * 2);
 	}
 	#imgBox img {
@@ -1281,6 +1281,9 @@ h3.first {
 	}
 	.merchBox img {
 		width: calc((15rem / 3) * 2);
+	}
+	.posterSect {
+		top: 20rem;
 	}
 	.wYWHPoster{
 		display: none;
@@ -1338,8 +1341,9 @@ h3.first {
 }
 /*for large landscape phones/ small tablets*/
 @media only screen and (max-width: 900px) {
-	header {
-		height: 7rem;
+
+	.posterSect {
+		top: 35rem;
 	}
 	.quoteSect .rainbow {
 		transform: translate(0 , 4rem);
