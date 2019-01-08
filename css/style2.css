@@ -1112,7 +1112,9 @@ h3.first {
 	.quote {
 		top: 50rem;
 		font-size: 2rem;
+		left: 30vw;
 	}
+
 	.rainbow {
 		position: relative;
 		top: 12rem;
