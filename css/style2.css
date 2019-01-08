@@ -1312,7 +1312,6 @@ h3.first {
 	}
 }
 @media only screen and (max-width: 600px) {
-
 	.album {
 		height: 24rem;
 		width: 24rem;
@@ -1333,7 +1332,7 @@ h3.first {
 		top: 95rem;
 	}
 	.quote {
-		top: calc(205vh + 70rem);
+		top: 50rem;
 	}
 }
 /* for portrait phones */
