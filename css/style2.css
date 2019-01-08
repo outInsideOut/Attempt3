@@ -31,7 +31,7 @@ body {
 } */
 header {
 	height: 5rem;
-	z-index: 2;
+	z-index: 1;
 	background-color: rgba(188, 188, 188, 0.5);
 	column-count: 3;
 	position: sticky;
@@ -127,7 +127,7 @@ nav li.last a:hover {
 	left: 0;
 	height: 100vh;
 	width: 0;
-
+	z-index: 2;
 	background-color: #111;
 	transition: .5s ease-out all;
 	-webkit-transition: .5s ease-out all;
