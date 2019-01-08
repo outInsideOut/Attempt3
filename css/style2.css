@@ -861,9 +861,11 @@ h3.first {
 .menuBox .title{
 	text-align: center;
 	padding: 0.25rem;
-	background-color: white;
+	background-color: black;
+	color: white;
 	position: sticky;
 	top: 0;
+	box-shadow: 0 2px 3px black;
 }
 .menuBox img {
 	width: 40%;
@@ -871,6 +873,8 @@ h3.first {
 
 	display: inline;
 	border-radius: 5px;
+
+	box-shadow: 0 0 5px black;
 }
 .customAlbumBox {
 	height: 33rem;
@@ -1132,10 +1136,10 @@ h3.first {
 		top: 9rem;
 		margin: 0;
 	}
-.customWrapper .button {
+	.customWrapper .button {
 	left: calc((7.5rem / 3) * 2);
 	top: calc((3.2rem / 3)  * 2);
-}
+	}
 	.coversSect {
 		height: 110rem;
 		display: block;
@@ -1231,6 +1235,12 @@ h3.first {
 	}
 	.customAlbum, .customSide.disk, .vinylRings {
 		left: calc(50% - 10rem);
+	}
+	.customBack {
+		top: -20rem;
+	}
+	.customMenu .title, .diskOptions {
+		font-size: 1.5rem;
 	}
 	.centerCircle {
 		top: -9.3rem;
