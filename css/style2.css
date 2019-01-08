@@ -1196,16 +1196,20 @@ h3.first {
 		box-sizing: border-box;
 	}
 	.allTheDarkSides {
-		width: 80vw;
+		width: 90vw;
 		height: calc(80vw * 2 / 3);
-		left: 10vw;
+		left: 5vw;
 		top: 9rem;
 		margin: 0;
 	}
-	.customWrapper .button {
-	left: calc((7.5rem / 3) * 2);
-	top: calc((3.2rem / 3)  * 2);
+	.allTheDarkSides img {
+		width: 30vw;
+		height: 30vw;
 	}
+	.customWrapper .button {
+		left: calc((7.5rem / 3) * 2);
+		top: calc((3.2rem / 3)  * 2);
+		}
 	.coversSect {
 		height: 110rem;
 		display: block;
