@@ -17,6 +17,7 @@ $(document).ready(function(){
 
 
 
+
   var isFullScreen = false;
   //mosaic fullscreen
   $("#fullBttn").click(function(){
