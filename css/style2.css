@@ -72,8 +72,6 @@ a {
 	color: black;
 }
 .homeWrapper {
-	height: 100vh;
-	overflow: hidden;
 }
 .hamburger {
 	height: 50px;
@@ -179,6 +177,7 @@ header h1 {
 .topSect {
 	background-color: black;
 	height: 100vh;
+	border-bottom: 5px solid grey;
 }
 .topSect iframe {
 	width: 80vw;
@@ -188,6 +187,50 @@ header h1 {
 	margin: auto;
 	top: 14vh;
 	left: 10vw;
+}
+.quoteSect {
+	overflow: hidden;
+	background-color: black;
+	height: 60rem;
+}
+.quoteSect img {
+	width: 100vw;
+	transform: translate(0 , -30%);
+}
+.quote {
+	position: absolute;
+	top: 75rem;
+	left: 47vw;
+}
+.quote p {
+	font-family: roboto, helvetica, sans-serif;
+	color: white;
+	text-align: center;
+	font-size: 2.5rem;
+	font-weight: 900;
+	transform: translate(-15vw , 0);
+}
+.quote h2 {
+	font-family: codeLight, helvetica, sans-serif;
+	font-size: 2rem;
+	color: lightgrey;
+}
+
+/* make your own dark side  */
+.customWrapper {
+	height: 30rem;
+}
+.customWrapper .buttonBox {
+	display: inline-block;
+	position: relative;
+	left: 60%;
+	top: 12rem;
+}
+.customWrapper .button {
+	width: 3rem;
+	position: relative;
+	top: calc(50% - 1rem);
+	left: calc(50% - 6rem);
 }
 .musicWrapper {
 	position: absolute;
@@ -316,36 +359,6 @@ header h1 {
 	left: calc(50vw - 5em);
 	margin-bottom: 3rem;
 }
-
-
-.quoteSect {
-	overflow: hidden;
-	background-color: black;
-	height: 110vh;
-}
-.quoteSect img {
-	width: 100vw;
-	transform: translate(0 , -30%);
-}
-.quote {
-	position: absolute;
-	top: 235vh;
-	left: 47vw;
-}
-.quote p {
-	font-family: roboto, helvetica, sans-serif;
-	color: white;
-	text-align: center;
-	font-size: 2.5rem;
-	font-weight: 900;
-	transform: translate(-15vw , 0);
-}
-.quote h2 {
-	font-family: codeLight, helvetica, sans-serif;
-	font-size: 2rem;
-	color: lightgrey;
-}
-
 
 .mosaicSect {
 	height: 110vh;
@@ -696,26 +709,6 @@ header h1 {
 	background-color: black;
 }
 
-.customWrapper {
-	background-color: black;
-	width: 100vw;
-
-	position: relative;
-	top: 130vh;
-
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
-	//grid-column-gap: 50px;
-}
-.customWrapper img {
-	width: 100%;
-
-}
-.customWrapper .bottom {
-	grid-row-start: 3;
-}
-
 
 /*.apparel {
 	left: 26rem;
@@ -802,7 +795,7 @@ h3.first {
 	height: 33rem;
 	grid-column-start: 2;
 	grid-column-end: 4;
-	background-color: lightblue;
+	background-color: lightgrey;
 	margin-right: 20px;
 }
 .customMenu {
@@ -1067,10 +1060,13 @@ h3.first {
 		top: .5rem;
 		height: 3rem;
 	}
+	.topSect {
+		height: 30rem;
+	}
 	.topSect iframe {
 		top: 8rem;
 		width: 80vw;
-		height: 30vw;
+		height: 20rem;
 		left: 10vw;
 
 	}
@@ -1097,8 +1093,12 @@ h3.first {
 	.seeMore {
 		top: 115rem;
 	}
+	.quoteSect {
+		height: 40rem;
+	}
 	.quote {
-		top: calc(205vh + 90rem);
+		top: 50rem;
+
 	}
 	.buttonBox {
 		height: calc((8rem / 3) * 2);
@@ -1167,7 +1167,6 @@ h3.first {
 		grid-column-end: 8;
 	}
 	.customAlbumBox {
-
 		grid-column-start: 2;
 		grid-column-end: 8;
 	}

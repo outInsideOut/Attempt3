@@ -15,6 +15,8 @@ $(document).ready(function(){
     $("#shuffleBttn, #fullBttn").css("display", "block");
   });
 
+
+
   var isFullScreen = false;
   //mosaic fullscreen
   $("#fullBttn").click(function(){
