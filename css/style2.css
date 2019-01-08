@@ -1228,9 +1228,10 @@ h3.first {
 	}
 	.buttonBox {
 		height: calc((8rem / 3) * 2);
-		width: calc((20rem / 3) * 2);
-		left: calc(50vw - (20rem / 3))
+		width: calc((30rem / 3) * 2);
+		left: calc(50vw - (30rem / 3));
 	}
+
 	.mosaicContainer {
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 		}
@@ -1247,7 +1248,7 @@ h3.first {
 		 grid-column: span 3;
 	 }
 	.storm {
-		left: calc((3rem / 3) * 2);
+		left: calc((6rem / 3) * 2);
 		top: calc((3.2rem / 3)  * 2);
 	}
 	#imgBox img {
