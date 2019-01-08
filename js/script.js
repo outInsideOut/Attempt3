@@ -28,8 +28,8 @@ $(document).ready(function(){
       $("#shuffleBttn").animate({
         top: "0.5rem"
       });
-      $("#refreshBttn").fadeIn();
-      $("#saveBttn").fadeIn();
+      $("#refreshBttn").fadeIn(300);
+      $("#saveBttn").fadeIn(300);
       $(".mosaicContainer img").css("opacity", "1" );
       isFullScreen = true;
     }
@@ -41,8 +41,8 @@ $(document).ready(function(){
         top: "5rem",
         height: "-=5rem"
       });
-      $("#refreshBttn").fadeOut();
-      $("#saveBttn").fadeOut();
+      $("#refreshBttn").fadeOut(300);
+      $("#saveBttn").fadeOut(300);
       $(".miniButtons").css("z-index" , "3");
       setTimeout(function(){
         $(".mosaicContainer").css({
@@ -101,7 +101,7 @@ var mosaicContents;
     };
   });
 
-  //save button
+    //save button
   $("#saveBttn").click(function(){
     //parse js array to json array
     var mosaicLocations = JSON.stringify(mosaicContents);
@@ -192,9 +192,8 @@ var mosaicContents;
     img = "#img"+parseInt(imgCounter);
     //fadeout previous image
     $(lastImg).fadeOut(300);
-
     // make sure img is loaded
-    $(img).delay(300).ready(function(){
+    $(img).ready(function(){
       //set var width to width of image
 
         width = $(img).width();
@@ -216,5 +215,197 @@ var mosaicContents;
 
   };
 
+  //
+  //
+  //customiser//
+  //set frontCover to selected coversSect
+  $(".customMenu.front img").click(function(){
+    //stores the id of the clicked cover
+    var imgNo = $(this).attr("id");
+    console.log(imgNo);
+    //empties div and then writes in an img element using the imgNo
+    $(".customFront").empty().html("<img src='Assets/allTheDarkSides/darkSide"+imgNo+".jpg'> ");
+    //Save to local storage
+    localStorage.setItem("frontCover", imgNo);
+  });
+  //sets back cover
+  $(".customMenu.back img").click(function(){
+    var imgNo = $(this).attr("id");
+    $(".customBack").empty().html("<img src='Assets/allTheDarkSides/darkSide"+imgNo+".jpg'> ");
+    //save to local storage
+    localStorage.setItem("backCover", imgNo);
+  });
+  var diskNo;
+  $(".customMenu.disk img").click(function(){
+    diskNo = $(this).attr("id");
+    diskNo = $(this).attr("id");
+    $(".customSide.disk").empty().html("<img src='Assets/allTheDarkSides/darkSide"+diskNo+".jpg'> ");
+    //save to local storage
+    localStorage.setItem("diskImg", diskNo);
+    //unchecks colour disk box
+    $("#isColour").prop("checked", false);
+    //sets local storage for checking if it's a colour disk
+    isColour = false;
+    localStorage.setItem("isColour", isColour);
+  });
+  //if sticker checkbox is ticked
+  var sticker = true;
+  $("#sticker").click(function(){
+    //check property
+    if($(this).prop("checked") == true){
+      $(".ringsDiv").empty().html("<img src='Assets/darkCentre.png' class='vinylRings  disk'> ");
+      sticker = true;
+    }
+    else{
+      $(".ringsDiv").empty().html("<img src='Assets/vinylRings.png' class='vinylRings disk'> ");
+      sticker = false;
+    };
+    //store sticker or not to local storage
+    localStorage.setItem("sticker", sticker);
+    //make .customBox .disk visible
+    $(".customBox .disk").css("display", "block");
+  });
+  //colour disk
+  var isColour = true;
+  var colour = $("#colourPicker").val();
+  var opacity = $("#opacityPicker").val();
+  //when colour disk checkbox ticked
+  $("#isColour").click(function(){
+    if($(this).prop("checked") == true){
+      //removes image from disk
+      $(".customSide.disk").empty();
+      isColour = true;
+      console.log($("#colourPicker").val());
+      //sets css background-color of disk to colour picker value
+      $(".customSide.disk").css({
+        "background-color": colour,
+        "opacity" : opacity
+      });
+    }
+    //if box unchecked
+    else {
+      //check local storage
+      if(localStorage.getItem("diskImg") != null) {
+        var imgNo = localStorage.getItem("diskImg");
+        //set disk back to having the image selected previously.
+        $(".customSide.disk").empty().html("<img src='Assets/allTheDarkSides/darkSide"+imgNo+".jpg'> ");
+      }
+      else {
+        $(".customSide.disk").empty().html("<img src='Assets/allTheDarkSides/darkSide"+diskNo+".jpg'> ");
+      };
+      isColour = false;
+    };
+    localStorage.setItem("isColour" , isColour);
+  });
 
+  //opacity change
+  $("#opacityPicker").change(function(){
+    //console.log("opacity changed");
+    //reads value from slider
+    opacity = $("#opacityPicker").val() / 100;
+    //sets disk opacity to value on slider
+    $(".customSide.disk").css("opacity" , opacity);
+    //stores the slider value to local storage
+    localStorage.setItem("opacity" , opacity);
+  });
+  //colour change
+  $("#colourPicker").change(function(){
+    //stores value from colourPicker
+    colour = $("#colourPicker").val();
+    //sets disk colour to value from colourPicker
+    $(".customSide.disk").css("background-color" , colour);
+    //save colour to local storage
+    localStorage.setItem("colour", colour);
+  })
+
+  //local storage retrieval on load
+  $(document).ready(function(){
+      //load from local localStorage
+    if (localStorage.getItem("frontCover") != null) {
+        var imgNo = localStorage.getItem("frontCover");
+        $(".customFront").empty().html("<img src='Assets/allTheDarkSides/darkSide"+imgNo+".jpg'> ");
+      };
+    if (localStorage.getItem("backCover") != null) {
+      imgNo = localStorage.getItem("backCover");
+      $(".customBack").empty().html("<img src='Assets/allTheDarkSides/darkSide"+imgNo+".jpg'> ");
+    };
+    if (localStorage.getItem("diskImg") != null) {
+      imgNo = localStorage.getItem("diskImg");
+      $(".customSide.disk").empty().html("<img src='Assets/allTheDarkSides/darkSide"+imgNo+".jpg'> ");
+    };
+    if (localStorage.getItem("colour") != null) {
+      colour = localStorage.getItem("colour");
+      $("#colourPicker").val(colour);
+      if (localStorage.getItem("isColour") == "true") {
+        $(".customSide.disk").empty().css("background-color" , colour);
+        //ticks colour checkbox
+        $("#isColour").prop("checked", true);
+      };
+    };
+    if (localStorage.getItem("opacity") != null) {
+      opacity = localStorage.getItem("opacity");
+      $(".customSide.disk").css("opacity" , opacity);
+    };
+    if (localStorage.getItem("sticker") == "true") {
+      $(".ringsDiv").empty().html("<img src='Assets/darkCentre.png' class='vinylRings  disk'> ");
+      $("#sticker").prop("checked", true);
+    }
+    //load tracker width
+    trackerWidth(1);
+  });
+
+  function trackerWidth(step){
+    var width = $(".step1").outerWidth() * step;
+    console.log(width.toString());
+    $(".tracker").animate({
+      width : width.toString()
+    })
+  };
+
+  var disk = false;
+  //change to front cover
+  $(".step1").click(function(){
+    trackerWidth(1);
+    //turn album right way around
+    $(".customFront").css("transform", "rotateY(0deg)");
+    $(".customBack").css("transform", "rotateY(180deg)");
+    //fade out steps 2 & 3
+    //fade in step 1
+    $(".customMenu.back, .disk").fadeOut(300);
+    $(".customMenu.front").delay(300).fadeIn(300);
+    if(disk == true) {
+      $(".disk").fadeOut(300);
+      $(".customAlbum").delay(300).fadeIn(300);
+    };
+
+    disk = false;
+  });
+  //change to back
+  $(".step2").click(function(){
+    $(".customFront").css("transform", "rotateY(-180deg)");
+    $(".customBack").css("transform", "rotateY(0deg)");
+    $(".customMenu.front, .disk").fadeOut(300);
+    $(".customMenu.back").delay(300).fadeIn(300);
+    console.log("click");
+    trackerWidth(2);
+    if(disk == true) {
+      $(".disk").fadeOut(300);
+      $(".customAlbum").delay(300).fadeIn(300);
+    }
+
+   disk = false;
+ });
+ //change to DISK
+ $(".step3").click(function(){
+   trackerWidth(3);
+   console.log("disk clicked");
+   $(".customMenu.front, .customMenu.back").fadeOut(300);
+   $(".customAlbum").fadeOut(300);
+   $(".disk").delay(300).fadeIn(300);
+   disk = true;
+
+ });
+ $(".step4").click(function(){
+   trackerWidth(4);
+ });
 });
