@@ -132,9 +132,9 @@ nav li.last a:hover {
 	z-index: 2;
 	background-color: #111;
 	transition: .5s ease-out all;
-	-webkit-transition: .5s ease-out all;
-	-moz-transition: .5s ease-out all;
-	-ms-transition: .5s ease-out all;
+		-webkit-transition: .5s ease-out all;
+		-moz-transition: .5s ease-out all;
+		-ms-transition: .5s ease-out all;
 	overflow-x: hidden;
 	text-align: center;
 }
@@ -145,9 +145,9 @@ nav li.last a:hover {
 .dropNav a {
 	color: #444;
 	transition: .3s ease-in-out;
-	-webkit-transition: .3s ease-in-out;
-	-moz-transition: .3s ease-in-out;
-	-ms-transition: .3s ease-in-out;
+		-webkit-transition: .3s ease-in-out;
+		-moz-transition: .3s ease-in-out;
+		-ms-transition: .3s ease-in-out;
 	font-size: 2rem;
 }
 .dropNav a:hover {
@@ -697,7 +697,8 @@ header h1 {
 
 .merchTypes {
 	width: 100vw;
-	position: relative;
+	position: absolute;
+	left: 0;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -773,7 +774,7 @@ header h1 {
 
 .posterSect  {
 	position: relative;
-	top: 10rem;
+	top: 30rem;
 }
 .posterSect img {
 	position: absolute;
@@ -1276,10 +1277,6 @@ h3.first {
 	.miniButtons img {
 		height: 70px;
 		width: 70px;
-	}
-	.merchTypes {
-		position: absolute;
-		left: 0;
 	}
 	.merchTypes .merchBox {
 		width: calc((16rem / 3) * 2);

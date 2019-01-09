@@ -15,9 +15,6 @@ $(document).ready(function(){
     $("#shuffleBttn, #fullBttn").css("display", "block");
   });
 
-
-
-
   var isFullScreen = false;
   //mosaic fullscreen
   $("#fullBttn").click(function(){
@@ -119,7 +116,6 @@ var mosaicContents;
     location.reload();
   });
   //to load saved mosaic
-  $(document).ready(function(){
     //check for localStorage
     if(localStorage.getItem("mosaic") != null) {
       console.log("Saved mosaic loaded");
@@ -135,7 +131,6 @@ var mosaicContents;
         i++;
       });
     };
-  });
 
   var windowWidth = window.innerWidth;
   //fullscreen gallery
@@ -322,7 +317,6 @@ var mosaicContents;
   })
 
   //local storage retrieval on load
-  $(document).ready(function(){
       //load from local localStorage
     if (localStorage.getItem("frontCover") != null) {
         var imgNo = localStorage.getItem("frontCover");
@@ -344,7 +338,6 @@ var mosaicContents;
         //ticks colour checkbox
         $("#isColour").prop("checked", true);
       };
-    };
     if (localStorage.getItem("opacity") != null) {
       opacity = localStorage.getItem("opacity");
       $(".customSide.disk").css("opacity" , opacity);
@@ -380,7 +373,6 @@ var mosaicContents;
       $(".disk").fadeOut(300);
       $(".customAlbum").delay(300).fadeIn(300);
     };
-
     disk = false;
   });
   //change to back
@@ -395,7 +387,6 @@ var mosaicContents;
       $(".disk").fadeOut(300);
       $(".customAlbum").delay(300).fadeIn(300);
     }
-
    disk = false;
  });
  //change to DISK
@@ -406,7 +397,6 @@ var mosaicContents;
    $(".customAlbum").fadeOut(300);
    $(".disk").delay(300).fadeIn(300);
    disk = true;
-
  });
  $(".step4").click(function(){
    trackerWidth(4);
