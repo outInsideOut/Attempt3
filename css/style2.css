@@ -702,7 +702,7 @@ header h1 {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.merchTypes .merchbox {
+.merchTypes .merchBox {
 	background-color: rgb(255 , 255, 255);
 
 	border: 2px solid black;
@@ -715,7 +715,7 @@ header h1 {
 	position: relative;
 
 	top: 5rem;
-	left: calc(50% - 8rem);
+	left: 3rem;
 	margin-bottom: 2rem;
 }
 .merchBox img {
@@ -1074,6 +1074,9 @@ h3.first {
 	nav.fullNav li {
 		padding: 0 .6em 0 .6em;
 	}
+	.merchTypes .merchBox {
+		left: 2rem;
+	}
 }
 /* for tablets */
 @media only screen and (max-width: 1200px) {
@@ -1141,6 +1144,9 @@ h3.first {
 
 	.merchTypes {
 		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.merchTypes .merchBox {
+		left: 3rem;
 	}
 	.mug {
 		display: none;
@@ -1280,10 +1286,10 @@ h3.first {
 		width: 70px;
 	}
 	.merchTypes .merchBox {
-		width: calc((16rem / 3) * 2);
-			width: -webkit-calc((16rem / 3) * 2);
-			width: -moz-calc((16rem / 3) * 2);
-			width: -ms-calc((16rem / 3) * 2);
+		width: calc(16rem * (2 / 3));
+			width: -webkit-calc(16rem * (2 / 3));
+			width: -moz-calc(16rem * (2 / 3));
+			width: -ms-calc(16rem * (2 / 3));
 		height: calc((17rem / 3) * 2);
 			height: -webkit-calc((17rem / 3) * 2);
 			height: -moz-calc((17rem / 3) * 2);
