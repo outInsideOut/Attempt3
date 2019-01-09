@@ -178,7 +178,9 @@ var mosaicContents;
   });
   //close button close gallery and last image
   $("#close").click(function(){
+    //fade out gallery
     $("#gallery").fadeOut(300);
+
     $(img).css("display", "none");
   });
 
@@ -192,10 +194,12 @@ var mosaicContents;
     $(lastImg).fadeOut(300);
     // make sure img is loaded
     $(img).ready(function(){
-      //set var width to width of image
 
+        // get image width
         width = $(img).width();
+        //get image height
         height = $(img).height();
+        //log to check working
         console.log(width);
         //center image using width var
         var left = "calc(50vw - "+parseInt(width/2)+"px)";

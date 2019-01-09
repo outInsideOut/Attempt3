@@ -185,7 +185,7 @@ header h1 {
 
 .topSect {
 	background-color: black;
-	height: calc(100vh - 5rem);
+	height: 800px;
 	border-bottom: 5px solid grey;
 }
 .topSect.demo {
@@ -193,11 +193,10 @@ header h1 {
 }
 .topSect iframe {
 	width: 80vw;
-	height: 80vh;
-
+	height: 600px;
 	position: absolute;
 	margin: auto;
-	top: 14vh;
+	top: 7rem;
 	left: 10vw;
 }
 .quoteSect {
@@ -214,7 +213,7 @@ header h1 {
 }
 .quote {
 	position: absolute;
-	top: 71rem;
+	top: 78rem;
 	left: 47vw;
 }
 .quote p {
@@ -302,7 +301,8 @@ header h1 {
 }
 .coverDiscript h2 {
 	text-align: center;
-	font-family: roboto, sans-serif;
+	font-family: codeLight ,helvetica, sans-serif;
+	letter-spacing: .3rem;
 	position: absolute;
 	top: 8rem;
 	width: 6rem;
@@ -428,8 +428,10 @@ header h1 {
     top: -2rem;
 }
 .back h1 {
+		font-family: codeLight, helvetica, sans-serif;
     font-size: 2rem;
     font-weight: 200;
+		letter-spacing: .15rem;
     color: white;
     position: relative;
     top: 4rem;
@@ -1031,6 +1033,25 @@ h3.first {
 .centreSticker {
 	transform: translateY(calc(-50% - 45rem));
 }
+
+/* demo page */
+.topSect.demo {
+	height: 1200px;
+}
+/* //description of video in demo page */
+.vidDescript {
+	width: 80vw;
+	color: #f1f1f1;
+	position: absolute;
+	top: 700px;
+
+	padding: 5rem 10vw;
+}
+.vidDescript h2 {
+	text-align: center;
+	font-family: codeLight, helvetica, sans-serif;
+	letter-spacing: .3rem
+}
 /* .trackCircle {
 
 	position: relative;
@@ -1398,6 +1419,12 @@ h3.first {
 	.quote {
 		left: 37vw;
 	}
+	.topSect.demo {
+
+		height: 1200px;
+	}
+	.vidDescript {
+		top: 550px;
 }
 /*for landscape phones */
 @media only screen and (max-width: 700px) {
