@@ -1349,7 +1349,7 @@ h3.first {
 	.vinylRings {
 		/* top: 12.5rem; */
 	}
-  .customAlbum,	.customSide, .customSide img, .customSide.disk, .vinylRings{
+  .customAlbum,	.customSide, .customSide img, .customSide.disk, .vinylRings {
 		height: 20rem;
 		width: 20rem;
 	}
