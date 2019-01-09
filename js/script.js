@@ -202,6 +202,7 @@ var mosaicContents;
         var top = "calc(50vh - "+parseInt(height/2)+"px)";
         $(img).css("left" , left);
         //if smaller screen then positions vertical centre
+        windowWidth = window.innerWidth
         if (windowWidth < 1055){
           console.log("smallScreen");
           $(img).css("top" , top);
@@ -338,6 +339,7 @@ var mosaicContents;
         //ticks colour checkbox
         $("#isColour").prop("checked", true);
       };
+    }
     if (localStorage.getItem("opacity") != null) {
       opacity = localStorage.getItem("opacity");
       $(".customSide.disk").css("opacity" , opacity);
@@ -348,7 +350,7 @@ var mosaicContents;
     }
     //load tracker width
     trackerWidth(1);
-  });
+
 
   function trackerWidth(step){
     var width = $(".step1").outerWidth() * step;

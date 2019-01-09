@@ -1269,6 +1269,7 @@ h3.first {
 	}
 	#imgBox img {
 		width: 100vw;
+		height: auto;
 	}
 	.miniButtons {
 		height: 70px;
