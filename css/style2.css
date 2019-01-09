@@ -185,8 +185,11 @@ header h1 {
 
 .topSect {
 	background-color: black;
-	height: 100vh;
+	height: calc(100vh - 5rem);
 	border-bottom: 5px solid grey;
+}
+.topSect.demo {
+	border-bottom: none;
 }
 .topSect iframe {
 	width: 80vw;
@@ -211,7 +214,7 @@ header h1 {
 }
 .quote {
 	position: absolute;
-	top: 75rem;
+	top: 71rem;
 	left: 47vw;
 }
 .quote p {
