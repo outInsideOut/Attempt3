@@ -825,12 +825,12 @@ header h1 {
 	animation: info;
 	top: -7rem;
 }
+/* animation to make the info rise ofver merchbox on hover */
 @keyframes info {
 	from {top: 3rem;}
 	to {top: -7rem;}
 }
-
-
+/* posters */
 .posterSect  {
 	position: relative;
 	top: 30rem;
@@ -874,21 +874,27 @@ header h1 {
 	background-color: black;
 }
 
-
+/*  */
+/*  */
 /* make yuor own vinyl customiser */
 /* whole section */
 .customBox {
+	/* whole page width */
   width: 100vw;
+	/* whole page height minus header */
   height: calc(100vh - 5rem);
 
 	display: grid;
 	/* 8 column grid */
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
+/* steps / progress bar */
 .topbar {
+	/* centre element with a margin at sides of i grid square */
 	grid-column-start: 2;
 	grid-column-end: 8;
 	height: 5rem;
+	/* margin top and bottom */
 	margin: 1rem 0;
 	border-radius: 5px;
 	background-color: lightgrey;
@@ -896,19 +902,22 @@ header h1 {
 	column-gap: 0;
 	border: 3px solid grey;
 }
-
+/* each step */
 .topbar .step {
 	height: 5rem;
 	margin: 0;
 	padding: 0;
 	cursor: pointer;
 }
+/* stretching div in progress bar */
+/* width changed using jQuery when a .step div is clicked */
 .tracker {
 	position: absolute;
 	height: 5rem;
 	width: 0;
 	background-color: #f1f1f1;
 }
+/* lines inbetween steps */
 .topBarLine {
 	height: 5rem;
 	width: 1.5px;
@@ -917,6 +926,7 @@ header h1 {
 	background-color: grey;
 	position: absolute;
 }
+/* numbers */
 .topbar h2 {
 	height: 3rem;
 	width: 3rem;
@@ -927,27 +937,25 @@ header h1 {
 	left: .5rem;
 	font-family: codeLight, sans-serif;
 }
-
+/* names */
 .topbar h3 {
 	font-family: roboto, sans-serif;
 	position: relative;
 	left: 2.5rem;
 	top: -1.1rem;
 }
-h3.first {
-	left: 3.5rem;
-}
-.last {
-}
+/* show elements in relation to the front of the vinyl on load */
 .customBox .front {
 	display: block;
 }
+/* steps 2 & 3 hidden on load */
 .customBox .back {
 	display: none;
 }
 .customBox .disk {
 	display: none;
 }
+/* side menu  */
 .menuBox {
 	height: 33rem;
 	grid-column-start: 2;
@@ -962,6 +970,7 @@ h3.first {
 
 	font-family: roboto;
 }
+/* disk menu is split into two */
 .customMenu.disk {
 	height: 20rem;
 }
@@ -984,27 +993,29 @@ h3.first {
 	padding: 0.25rem;
 	background-color: black;
 	color: white;
+	/* make menu stick to top of div */
 	position: sticky;
 	top: 0;
 	box-shadow: 0 2px 3px black;
 }
 .menuBox img {
+	/* position:  and size images */
 	width: 40%;
 	margin: 4%;
-
 	display: inline;
 	border-radius: 5px;
-
 	box-shadow: 0 0 5px black;
 }
+/* box for album and disk */
 .customAlbumBox {
+	/* same height as menu */
 	height: 33rem;
+	/* span 4 columns */
 	grid-column-start: 4;
 	grid-column-end: 8;
-	border-radius: 5px;
-	/* background-color: lightblue; */
 }
 .customAlbum {
+	/* square */
 	height: 30rem;
 	width: 30rem;
 	box-shadow: 0 0 10px black;
@@ -1013,14 +1024,14 @@ h3.first {
 	top: 1.5rem;
 	left: calc(50% - 15rem);
 
-	/* for the 3d album thing */
-	transform-style: preserve-3d;
+	/* depth of spin on 3d transform */
 	perspective: 600px;
 	transition: 3s all;
 }
 .customSide {
+		/* for the 3d album thing */
 	transform-style: preserve-3d;
-
+	/* hide back side of div when backwards */
 	backface-visibility: hidden;
 	perspective: 600px;
 	transition: 0.5s all;
@@ -1031,19 +1042,20 @@ h3.first {
 }
 .customFront {
 	background-color: green;
-
+	/* front starts facing forward */
 	transform: rotateY(0deg);
 }
 .customBack {
 	position: relative;
 	top: -30rem;
 	background-color: red;
-
+	/* back starts facing backward */
 	transform: rotateY(180deg);
 }
 .customSide.disk {
 	height: 30rem;
 	width: 30rem;
+	/* circular */
 	border-radius: 50%;
 	background-color: white;
 	position: relative;
@@ -1054,9 +1066,11 @@ h3.first {
 	box-shadow: 0 0 10px black;
 }
 .customSide.disk img {
+	/* circular */
 	border-radius: 50%;
 }
 .centerCircle {
+	/* fake whole in centre of vinyl */
 	width: 1rem;
 	height: 1rem;
 	position: relative;
@@ -1066,10 +1080,12 @@ h3.first {
 	border: 2px solid black;
 	border-radius: 50%;
 }
+/* holds graphics for the concentric circles graphic to make the vinyl look rel */
 .ringsDiv {
 	position: relative;
 	top: -33rem;
 }
+/* vinylrings graphc */
 .vinylRings {
 	width: 30rem;
 	height: 30rem;
@@ -1079,6 +1095,7 @@ h3.first {
 	/* transform: translateY(calc(-50% - 15rem));
 	left: calc(50% - 14.75rem); */
 }
+/* vinyl rings and sticker in centre graphic */
 .centreSticker {
 	transform: translateY(calc(-50% - 45rem));
 }
@@ -1101,44 +1118,7 @@ h3.first {
 	font-family: codeLight, helvetica, sans-serif;
 	letter-spacing: .3rem
 }
-/* .trackCircle {
 
-	position: relative;
-	opacity: 0.4;
-	border: 1.5px solid black;
-	border-radius: 50%;
-} */
-/* .tC1 {
-	width: 10rem;
-	height: 10rem;
-	left: calc(50% - 5rem);
-	top: calc(-50% - 3.5rem);
-}
-.tC2 {
-	width: 15rem;
-	height: 15rem;
-	left: calc(50% - 7.5rem);
-	top: calc(-50% - 16rem);
-}
-.tC3 {
-	width: 15.5rem;
-	height: 15.5rem;
-	left: calc(50% - 7.75rem);
-	top: calc(-50% - 31.5rem);
-}
-.tC4 {
-	width: 20rem;
-	height: 20rem;
-	left: calc(50% - 10rem);
-	top: calc(-50% - 49.25rem);
-}
-.tC5 {
-	width: 27rem;
-	height: 27rem;
-	left: calc(50% - 13.5rem);
-	top: calc(-50% - 62.75rem);
-	display: none;
-} */
 /*for tablets / smaller laptops*/
 @media only screen and (max-width: 1450px) {
 	nav.fullNav li {
@@ -1150,28 +1130,22 @@ h3.first {
 }
 /* for tablets */
 @media only screen and (max-width: 1200px) {
+	/* remove navbar */
 	.fullNav {
 		display: none;
 	}
-
-	header h1 {
-
-	}
+	/* show menu icon */
 	.hamburger {
 		display: inline-block;
 		position: absolute;
 		top: 5px;
 		left: 10px;
 	}
-	.share {
-		display: inline-block;
-		position: absolute;
-		right: 10px;
-		top: 10px;
-	}
+	/* hide share menu */
 	.socialMediaIcons {
 		display: none;
 	}
+	/* albums section */
 	.album {
 		height: 20rem;
 		width: 20rem;
@@ -1190,18 +1164,13 @@ h3.first {
 		top: 3rem;
 	}
 	.back .line {
-	    position: relative;
 	    top: 2em;
-	    margin: auto;
-	    width: 15em;
-	    height: .1em;
-	    background-color: white;
+
 	}
 	.albumButton {
-		position: relative;
 	  top: 3em;
-	  width: 10em;
 	}
+	/* quote section */
 	.quote {
 		left: 40vw;
 	}
@@ -1213,14 +1182,17 @@ h3.first {
 	}
 
 	.merchTypes {
+		/* reduce to three boxes */
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 	.merchTypes .merchBox {
 		left: 3rem;
 	}
+	/* remove for awkward dimensions */
 	.mug {
 		display: none;
 	}
+	/* re-position posters */
 	.wYWHPoster {
 		left: -20vw;
 
@@ -1232,8 +1204,15 @@ h3.first {
 	.AHMPoster {
 		left: 85vw;
 	}
-@media only screen and (max-width: 1055px) {
 
+
+	/* for large phones and tablets */
+@media only screen and (max-width: 1055px) {
+	/* change root font-size to change 1rem */
+	:root {
+		font-size: 24px;
+	}
+	/* change size and re-centre */
 	header h1 {
 		font-size: 2rem;
 		left: calc(50vw - 163.5px);
@@ -1242,16 +1221,16 @@ h3.first {
 		left: -ms-calc(50vw - 163.5px);
 	}
 
-	:root {
-		font-size: 24px;
-	}
+	/* change size and re-position */
 	.hamburger {
 		top: .5rem;
 		height: 3rem;
 	}
+	/* shorter */
 	.topSect {
 		height: 30rem;
 	}
+	/* more appropriate scale aka shorter */
 	.topSect iframe {
 		top: 8rem;
 		width: 80vw;
@@ -1259,25 +1238,30 @@ h3.first {
 		left: 10vw;
 
 	}
+	/* shorter */
 	.quoteSect {
 		height: 40rem;
 	}
+	/* reposition quote to centre of new section */
 	.quote {
 		top: 50rem;
 		font-size: 2rem;
 		left: 30vw;
 	}
-
+	/* reposition image to centre of new section */
 	.rainbow {
 		position: relative;
 		top: 12rem;
 	}
+	/* change to a vertical alignment  */
 	.customDescript {
+		/* make most og the width of the screen */
 		width: 80vw;
 		left: 10vw;
 		top: 5rem;
 		box-sizing: border-box;
 	}
+	/* make most of the the width of the screen */
 	.allTheDarkSides {
 		width: 90vw;
 		height: calc(80vw * 2 / 3);
@@ -1285,6 +1269,7 @@ h3.first {
 		top: 9rem;
 		margin: 0 0 2rem 0;
 	}
+	/* resize images */
 	.allTheDarkSides img {
 		width: 30vw;
 		height: 30vw;
@@ -1293,19 +1278,19 @@ h3.first {
 		left: calc((7.5rem / 3) * 2);
 		top: calc((3.2rem / 3)  * 2);
 		}
-	.coversSect {
-		height: 110rem;
-		display: block;
-	}
+
+		/* albums now in verticle allignement */
 	.album {
 			top: 30rem;
 	    left: calc(50vw - 9rem);
 			height: 30rem;
 			width: 30rem;
 	}
+	/* move down */
 	.wishYouWereHere {
 	    top: 65rem;
 	}
+	/* move down */
 	.pulse {
 	    top: 100rem;
 			margin-bottom: 5rem;
@@ -1313,11 +1298,12 @@ h3.first {
 	.backContent {
 		transform: translate(0, 5rem);
 	}
+	/* move down */
 	.seeMore {
 		top: 115rem;
 	}
 
-
+	/* change number of columns for different expected screen ratio */
 	.mosaicContainer {
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 		}
@@ -1327,6 +1313,7 @@ h3.first {
 	#saveBttn {
 		right: 100px;
 	}
+	/* change the space taken by some of the images */
 	.mos4 {
 		grid-column: span 4;
 	}
@@ -1343,6 +1330,7 @@ h3.first {
 		left: calc(50% - 118px);
 		top: calc((3.2rem / 3)  * 2);
 	}
+	/* change image size in full screen slider to fit different expected sxcreen ratio */
 	#imgBox img {
 		width: 100vw;
 		height: auto;
@@ -1375,6 +1363,7 @@ h3.first {
 	.posterSect {
 		top: 20rem;
 	}
+	/* hide two posters on smaller screens */
 	.wYWHPoster{
 		display: none;
 	}
@@ -1389,14 +1378,17 @@ h3.first {
 	}
 
 	/* //customiser */
+	/* change to vertical orientatio */
 	.topbar h3 {
 		left: 1.5rem;
 		top: -0.2rem;
 	}
+	/* make wider */
 	.menuBox {
 		grid-column-start: 2;
 		grid-column-end: 8;
 	}
+	/* make wider */
 	.customAlbumBox {
 		grid-column-start: 2;
 		grid-column-end: 8;
@@ -1416,18 +1408,13 @@ h3.first {
 	.ringsDiv {
 		top: -23rem;
 	}
-	.vinylRings {
-		/* top: 12.5rem; */
-	}
+
   .customAlbum,	.customSide, .customSide img, .customSide.disk, .vinylRings {
 		height: 20rem;
 		width: 20rem;
 	}
 
-	/* .customMenu {
-		overflow-x: scroll;
-		overflow-y: hidden;
-	} */
+
 }
 /*for large landscape phones/ small tablets*/
 @media only screen and (max-width: 900px) {
@@ -1447,9 +1434,11 @@ h3.first {
 	.quoteSect h2 {
 		font-size: 1.5rem;
 	}
+	/* make two columns */
 	.merchTypes {
 		grid-template-columns: 1fr 1fr;
 	}
+	/* bring mug div back */
 	.mug {
 		display: block;
 	}
