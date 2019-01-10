@@ -1,15 +1,20 @@
+/* custom font */
 @font-face {
+	/* set name */
 	font-family: codeLight;
+	/* link to font */
 	src: url(../Assets/Fonts/codeLight/CODE_Light.ttf);
 }
 @font-face {
 	font-family: roboto;
 	src: url(../Assets/Fonts/robotoRegular/Roboto-Regular.ttf);
 }
+/* remove auto margin & auto padding  */
 body, nav.fullNav ul, h2, p {
 	margin: 0;
 	padding: 0;
 }
+/* no overflow on sides */
 body, header, nav ul {
 	overflow-x: hidden;
 }
@@ -17,13 +22,12 @@ body {
 	width: 100vw;
 	font-family: Helvetica, sans-serif;
 	font-size: 16px;
+	/* set background image for all pages */
 	background-image: url(../Assets/plainWall.jpg);
+	/* stop background image from scrolling with the site */
 	background-attachment: fixed;
 }
-.galleryBody {
-	height: 100vh;
-	overflow-y: hidden;
-}
+
 /* .storeBody {
 	height: 200vh;
 	width: 100vh;
@@ -32,8 +36,11 @@ body {
 header {
 	height: 5rem;
 	z-index: 1;
+	/* half opacity background-color:  */
 	background-color: rgba(188, 188, 188, 0.5);
+	/* split into 3 columns */
 	column-count: 3;
+	/* stick the header to the top of the page */
 	position: sticky;
 	position: -webkit-sticky;
 	position: -moz-sticky;
@@ -42,17 +49,19 @@ header {
 }
 a {
 	font-family: roboto, sans-serif;
+	/* no underline on the links */
 	text-decoration: none;
 	font-weight: 600;
 }
 .button{
-    text-decoration: none;
     box-sizing: border-box;
+		/* space the border on buttons */
     padding: .6em 1em;
-    background-color: black;
     border: 2px solid white;
+		/* font colour  */
     color: white;
     font-size: 1.2em;
+		/* show the div behind */
     background-color: transparent;
     transition: .5s ease-out;
 		-webkit-transition: .5s ease-out;
@@ -60,28 +69,34 @@ a {
 }
 .button a {
 	color: white;
+	/* sets the duration of hover animations */
 	transition: .5s all;
 	-webkit-transition: .5s all;
 	-moz-transition: .5s all;
 }
 .button:hover{
+	/* inverts colors on hover */
    background-color: white;
-   color: #333;
 	 border: 2px solid black;
 	 cursor: pointer;
 }
 .button:hover a {
+	/* inverts color of text on hover */
 	color: black;
 }
 .hamburger {
+	/* for small screen menu  */
 	height: 50px;
+	/* no display when large screens */
 	display: none;
 }
 .fullNav {
+	/* positoning nav bar */
 	position: absolute;
 	top: 1.5rem;
 }
 nav ul {
+	/* no bullet points */
 	list-style-type: none;
 }
 .fullNav a {
@@ -92,10 +107,9 @@ nav.fullNav li {
 	font-family: roboto;
 	font-size: 1.1rem;
 	font-weight: 600;
-	color: black;
+
 	text-decoration: none;
 	/*positioning*/
-
 	padding: 0 1em 0 1em;
 	border-right: .5px solid darkgray;
 }
@@ -103,8 +117,10 @@ nav.fullNav li {
 	border-right: none;
 }
 nav li:hover {
+	/* changes cursor to  ponter over nav items */
 	cursor: pointer;
 }
+/* each nav item becomes a different colour when hovered over */
 nav li.one a:hover {
 	color: purple;
 }
@@ -121,14 +137,19 @@ nav li.last a:hover {
 	color: red;
 }
 .fullNav a:hover {
+	/* helps to show the coloured text */
 	text-shadow: 0 0 3px white;
 }
 .dropNav {
+	/* keeps the side nav for smaller screens in the top left corner */
 	position: fixed;
 	top: 0;
 	left: 0;
+	/* take up whole height of screen */
 	height: 100vh;
+	/* width becomes 100% in script function */
 	width: 0;
+	/* make sure it sits on top of other elements */
 	z-index: 2;
 	background-color: #111;
 	transition: .5s ease-out all;
@@ -144,6 +165,7 @@ nav li.last a:hover {
 }
 .dropNav a {
 	color: #444;
+	/* ease-in-out is slower at the start and end of the animation */
 	transition: .3s ease-in-out;
 		-webkit-transition: .3s ease-in-out;
 		-moz-transition: .3s ease-in-out;
@@ -163,7 +185,9 @@ header h1 {
 	margin-top: 1rem;
 	font-family: codeLight, helvetica, sans-serif;
 	font-size: 2rem;
+	/* sets thickness of the font */
 	font-weight: 900;
+	/* spacing letters for style */
 	letter-spacing: .3rem;
 	text-align: center;
 	position : absolute;
@@ -172,6 +196,7 @@ header h1 {
 .socialMediaIcons {
 	float: right;
 	padding: 0rem 1.2rem 0 1rem;
+	/* position the icons on top right */
 	position: absolute;
 	top: 1rem;
 	right: .25rem;
@@ -180,6 +205,7 @@ header h1 {
 	height: 2.5rem;
 }
 .socialMediaIcons img:hover {
+	/* fade on hover */
 	opacity: 0.5;
 }
 
@@ -189,8 +215,10 @@ header h1 {
 	border-bottom: 5px solid grey;
 }
 .topSect.demo {
+	/*topSect is re-used in the demo page, this removes the bottom border  */
 	border-bottom: none;
 }
+/* youtube video */
 .topSect iframe {
 	width: 80vw;
 	height: 600px;
@@ -204,12 +232,13 @@ header h1 {
 	background-color: black;
 	height: 60rem;
 }
+/* background images */
 .quoteSect img {
 	width: 100vw;
 	transform: translate(0 , -30%);
-	-webkit-transform: translate(0 , -30%);
-	-moz-transform: translate(0 , -30%);
-	-ms-transform: translate(0 , -30%);
+		-webkit-transform: translate(0 , -30%);
+		-moz-transform: translate(0 , -30%);
+		-ms-transform: translate(0 , -30%);
 }
 .quote {
 	position: absolute;
@@ -223,9 +252,9 @@ header h1 {
 	font-size: 2.5rem;
 	font-weight: 900;
 	transform: translate(-15vw , 0);
-	-webkit-transform: translate(-15vw , 0);
-	-moz-transform: translate(-15vw , 0);
-	-ms-transform: translate(-15vw , 0);
+		-webkit-transform: translate(-15vw , 0);
+		-moz-transform: translate(-15vw , 0);
+		-ms-transform: translate(-15vw , 0);
 }
 .quote h2 {
 	font-family: codeLight, helvetica, sans-serif;
@@ -262,10 +291,13 @@ header h1 {
 	top: -10rem;
 	width: 45vw;
 	height: 30vw;
+	/* grid for images */
 	display: grid;
+	/* three columns */
 	grid-template-columns: 1fr 1fr 1fr;
 }
 .allTheDarkSides img {
+	/* size of images */
 	width: 15vw;
 	height: 15vw;
 }
@@ -292,13 +324,17 @@ header h1 {
 	left: -moz-calc(50% - 6rem);
 }
 
-
+/*  */
+/* music page */
+/*  */
+/*  */
 .musicWrapper {
 	position: absolute;
 	height: 100vh;
 	width: 100vw;
 	overflow-x: hidden;
 }
+
 .coverDiscript h2 {
 	text-align: center;
 	font-family: codeLight ,helvetica, sans-serif;
@@ -314,10 +350,9 @@ header h1 {
 	background-color: black;
 	color: white;
 }
-.coverDiscript p {
 
-}
 .album {
+		/* size of the album divs */
   	height: 24rem;
     width: 24rem;
     /*positioning*/
@@ -325,21 +360,23 @@ header h1 {
     top: 25rem;
     margin-left: 12rem;
     transform: translate( -50% , -50%);
-		-webkit-transform: translate( -50% , -50%);
-		-moz-transform: translate( -50% , -50%);
-		-ms-transform: translate( -50% , -50%);
+			-webkit-transform: translate( -50% , -50%);
+			-moz-transform: translate( -50% , -50%);
+			-ms-transform: translate( -50% , -50%);
     /*FLIP EFFECT*/
     transform-style: preserve-3d;
-		-webkit-transform-style: preserve-3d;
-		-moz-transform-style: preserve-3d;
-		-ms-transform-style: preserve-3d;
+			-webkit-transform-style: preserve-3d;
+			-moz-transform-style: preserve-3d;
+			-ms-transform-style: preserve-3d;
+		/* depth of rotation */
     perspective: 600px;
     transition: 0.5s all;
-		-webkit-transition: 0.5s all;
-		-moz-transition: 0.5s all;
-		-ms-transition: 0.5s all;
+			-webkit-transition: 0.5s all;
+			-moz-transition: 0.5s all;
+			-ms-transition: 0.5s all;
     box-shadow: 2px 2px 10px;
 }
+/* positioning individual albums */
 .darkSide {
     left: 3rem;
 }
@@ -355,42 +392,41 @@ header h1 {
 	  left: -moz-calc(100vw - 27rem);
 		left: -ms-calc(100vw - 27rem);
 }
+
 .album .front{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-  /*hidden background*/
+  /*hide reverse side of div*/
     backface-visibility: hidden;
-		-webkit-backface-visibility: hidden;
-		-moz-backface-visibility: hidden;
-		-ms-backface-visibility: hidden;
+			-webkit-backface-visibility: hidden;
+			-moz-backface-visibility: hidden;
+			-ms-backface-visibility: hidden;
     transform: rotateX(0deg);
-		-webkit-transform: rotateX(0deg);
-		-moz-transform: rotateX(0deg);
-		-ms-transform: rotateX(0deg);
+			-webkit-transform: rotateX(0deg);
+			-moz-transform: rotateX(0deg);
+			-ms-transform: rotateX(0deg);
     transition: 0.5s;
-		-webkit-transition: 0.5s;
-		-moz-transition: 0.5s;
-		-ms-transition: 0.5s;
+			-webkit-transition: 0.5s;
+			-moz-transition: 0.5s;
+			-ms-transition: 0.5s;
 }
 .album .front img {
     width: 100%;
     height: 100%;
 }
 .album:hover .front {
+	/* flip around x axis on hover */
     transform: rotateX(-180deg);
-		-webkit-transform: rotateX(-180deg);
-		-moz-transform: rotateX(-180deg);
-		-ms-transform: rotateX(-180deg);
+			-webkit-transform: rotateX(-180deg);
+			-moz-transform: rotateX(-180deg);
+			-ms-transform: rotateX(-180deg);
 }
 .album:hover {
-    box-shadow: 0 0  10px grey;
-    transition-delay: 0.3s;
-		-webkit-transition-delay: 0.3s;
-		-moz-transition-delay: 0.3s;
-		-ms-transition-delay: 0.3s;
+	/* softer shadow on hover */
+    box-shadow: 0 0  50px grey;
 }
 
 .album .back {
@@ -403,26 +439,26 @@ header h1 {
     text-align: center;
     /*hidden background*/
     backface-visibility: hidden;
-		-webkit-backface-visibility: hidden;
-		-moz-backface-visibility: hidden;
-		-ms-backface-visibility: hidden;
+			-webkit-backface-visibility: hidden;
+			-moz-backface-visibility: hidden;
+			-ms-backface-visibility: hidden;
     transition: 0.5s;
-		-webkit-transition: 0.5s;
-		-moz-transition: 0.5s;
-		-ms-transition: 0.5s;
+			-webkit-transition: 0.5s;
+			-moz-transition: 0.5s;
+			-ms-transition: 0.5s;
     transform: rotateX(180deg);
-		-webkit-transform: rotateX(180deg);
-		-moz-transform: rotateX(180deg);
-		-ms-transform: rotateX(180deg);
+			-webkit-transform: rotateX(180deg);
+			-moz-transform: rotateX(180deg);
+			-ms-transform: rotateX(180deg);
 }
 .album:hover .back {
   transform: rotateX(0deg);
-	-webkit-transform: rotateX(0deg);
-	-moz-transform: rotateX(0deg);
-	-ms-transform: rotateX(0deg);
+		-webkit-transform: rotateX(0deg);
+		-moz-transform: rotateX(0deg);
+		-ms-transform: rotateX(0deg);
 }
 /* CHECKED */
-/*content*/
+/*conten on back side of albumst*/
 .backContent {
     position: relative;
     top: -2rem;
@@ -447,6 +483,7 @@ header h1 {
     margin: 2rem;
 }
 .back .line {
+	/* just a horizontal line to split text items */
     position: relative;
     top: 4em;
     margin: auto;
@@ -469,37 +506,45 @@ header h1 {
 	margin-bottom: 3rem;
 }
 
-.mosaicSect {
-	height: 110vh;
-	background-color: black;
+.galleryBody {
+	/* sets the gallery to be the height of the screen */
+	height: 100vh;
+	overflow-y: hidden;
 }
 .mosaicContainer {
+	/* set the mosaic to the rest of the height of the screen after the header element */
 	height: calc(100vh - 5rem);
+	/* grid display */
 	display: grid;
+	/* 8 columns */
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 	position: absolute;
 	top: 5rem;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
 }
 .mosaicContainer div {
+	/* stops the image from going over the edges of the mosaic cell on scale up */
 	overflow: hidden;
 }
 .mosaicContainer img {
 	display: block;
 	height: 100%;
 	width: 100%;
+	/* preserves the ratio of the sides of the image */
 	object-fit: cover;
 	opacity: 0.8;
 	transition: 0.3s;
-	-webkit-transition: 0.3s;
-	-moz-transition: 0.3s;
-	-o-transition: 0.3s;
+		-webkit-transition: 0.3s;
+		-moz-transition: 0.3s;
+		-o-transition: 0.3s;
 }
+/* img is brighter and larger on hover */
 .mosaicContainer img:hover {
 	opacity: 1;
 	transform: scale(1.1);
-	-webkit-transform: scale(1.1);
-	-moz-transform: scale(1.1);
-	-o-transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+		-moz-transform: scale(1.1);
+		-o-transform: scale(1.1);
 }
 #miniButtonsBox {
 	height: 100vh;
@@ -507,11 +552,14 @@ header h1 {
 	overflow: hidden;
 }
 .miniButtons {
+	/* keep all mosaic buttons the same size */
 	height: 50px;
 	width: 50px;
 	background-color: rgba(255, 255, 255, 0.3);
 	position: absolute;
+	/* rounded edges */
 	border-radius: 5px;
+	/* //sit on top of the mosaic */
 	z-index: 1;
 	transition: 0.5s all;
 	display: block;
@@ -535,6 +583,7 @@ header h1 {
 	bottom: 0.5rem;
 	right: 0.5rem;
 }
+/* next two buttons have display none until fullscreen */
 #saveBttn {
 	display: none;
 	top: 0.5rem;
@@ -545,9 +594,11 @@ header h1 {
 	top: 0.5rem;
 	right:140px;
 }
+/* change mouse to show that yuo can click on the images */
 .tile {
 	cursor: pointer;
 }
+/* positioning of elements */
 .mos1 {
 	grid-column: span 2;
 	grid-row: span 1;
@@ -598,6 +649,7 @@ header h1 {
 	left: calc(50vw - 10rem);
 	border: 2px solid white;
 }
+/* fullscreen gallery */
 .galleryBox {
 	display: none;
 	width: 100vw;
@@ -605,10 +657,12 @@ header h1 {
   position: absolute;
 	top: 0;
 	left: 0;
+	/* make sure the slider/gallery is on top of everything else */
 	z-index: 4;
   background-color: black;
 	position: absolute;
 }
+/* direction buttons */
 .chevron {
   height: 10rem;
   width: 10rem;
@@ -621,8 +675,10 @@ header h1 {
 	height: 10rem;
 }
 .left img {
+	/* both chevrons are the same img so one needs flipping 180 */
 	transform: rotate(180deg);
 }
+/* container of the img */
 .imageBox {
     height: 80vh;
 		display: block;
@@ -632,12 +688,12 @@ header h1 {
 	position: absolute;
 	display: none;
   height: 100vh;
+	/* stop images being bigger than the width of the screen */
 	max-width: 100vw;
 	top: 0;
 }
 .right {
-  /* background-color: green; */
-  right: 0;
+    right: 0;
 }
 .right img {
 	position: absolute;
@@ -650,6 +706,7 @@ header h1 {
 	height: 50px;
 	width: 50px;
 }
+
 
 .teeSale {
 	transform: translate(0 , 10rem);
@@ -818,22 +875,14 @@ header h1 {
 }
 
 
-/*.apparel {
-	left: 26rem;
-}
-
-.saucer {
-	left: 45rem;
-}*/
-/*  */
-/*  */
-/*  */
-/***CUSTOMSIER***/
+/* make yuor own vinyl customiser */
+/* whole section */
 .customBox {
   width: 100vw;
   height: calc(100vh - 5rem);
 
 	display: grid;
+	/* 8 column grid */
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .topbar {

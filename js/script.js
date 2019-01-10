@@ -140,8 +140,11 @@ var mosaicContents;
   // if tile clicked
   $('.tile').click(function(){
     console.log("clicked");
+    //store the id from the image clicked on
     imgCounter = parseInt($(this).children("img").attr("id"));
-    console.log(imgCounter);
+
+    // console.log(imgCounter); //for checking
+    //see function changeImage();
     changeImage();
     //changes the display value so that gallery appears
     $("#gallery").fadeIn(300);
