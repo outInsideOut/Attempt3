@@ -29,13 +29,18 @@
       <!-- <a href="#"><img class="share" src="Assets/share.png"></a> -->
     </header>
 
+		<!-- customiser container -->
     <section class="customBox">
+			<!-- nav / progress bar -->
       <div class="topbar">
+				<!-- div of changing width to show progress -->
         <div class="tracker"></div>
+				<!-- div / button -->
         <div class="step step1">
           <h2 class="first">1</h2>
           <h3 class="first">FRONT</h3>
         </div>
+				<!-- line between divs the trcker kept covering the column-rule css so made a seperate div -->
         <div class="topBarLine"></div>
         <div class="step step2">
           <h2>2</h2>
@@ -52,10 +57,13 @@
           <h3>SAVE</h3>
         </div> -->
       </div>
-
+			<!-- left side menu for choosing overs/disk -->
       <aside class="menuBox">
+				<!-- front cover options -->
         <div class="customMenu front">
+					<!-- title -->
           <div class="title">CHOOSE THE FRONT COVER</div>
+					<!-- image choices -->
           <img src="Assets/allTheDarkSides/darkSide1.jpg" id="1">
           <img src="Assets/allTheDarkSides/darkSide2.jpg" id="2">
           <img src="Assets/allTheDarkSides/darkSide3.jpg" id="3">
@@ -81,9 +89,11 @@
           <img src="Assets/allTheDarkSides/darkSide23.jpg" id="23">
           <img src="Assets/allTheDarkSides/darkSide24.jpg" id="24">
         </div>
-
+				<!-- back cover options -->
         <div class="customMenu back">
+					<!-- title -->
           <div class="title">CHOOSE THE BACK COVER</div>
+					<!-- image choices -->
           <img src="Assets/allTheDarkSides/darkSide26.jpg" id="26">
           <img src="Assets/allTheDarkSides/darkSide27.jpg" id="27">
           <img src="Assets/allTheDarkSides/darkSide1.jpg" id="1">
@@ -111,8 +121,11 @@
           <img src="Assets/allTheDarkSides/darkSide23.jpg" id="23">
           <img src="Assets/allTheDarkSides/darkSide24.jpg" id="24">
         </div>
+				<!-- disk options -->
         <div class="customMenu disk">
+					<!-- title -->
           <div class="title">CHOOSE THE DISK</div>
+					<!-- image options -->
           <img src="Assets/allTheDarkSides/darkSide1.jpg" id="1">
           <img src="Assets/allTheDarkSides/darkSide2.jpg" id="2">
           <img src="Assets/allTheDarkSides/darkSide3.jpg" id="3">
@@ -138,32 +151,44 @@
           <img src="Assets/allTheDarkSides/darkSide23.jpg" id="23">
           <img src="Assets/allTheDarkSides/darkSide24.jpg" id="24">
         </div>
+				<!-- further options -->
         <div class="diskOptions disk">
+					<!-- title -->
           <div class="title">DISK OPTIONS</div>
+					<!-- form items for manipulation of disk div -->
           <input type="checkbox" id="sticker">CENTER STICKER?<br>
           <input type="checkbox" id="isColour">COLOUR DISK?<br>
+					<!-- colour input picker -->
           <input type="color" id="colourPicker"><br>
           <p>PICK OPACITY:<p>
+					<!-- range input opacity picker -->
           <input type="range" id="opacityPicker" min="60" max="100" value="50">
         </div>
       </aside>
 
+			<!-- the album covers / disk container -->
       <div class="customAlbumBox">
+				<!-- the front and back covers -->
         <div class="customAlbum">
+					<!-- front side -->
           <div class="customFront customSide">
           </div>
+					<!-- back side -->
           <div class="customBack customSide">
           </div>
         </div>
+				<!-- //disk div -->
         <div class="customSide disk">
         </div>
+				<!-- hole in center of disk -->
         <div class="centerCircle disk"></div>
+				<!-- graphic to make the div look like a vinyl -->
         <div class="ringsDiv">
           <img src="Assets/vinylRings.png" class=" vinylRings disk">
         </div>
       </div>
     </section>
-
+		<!-- side menu -->
     <nav class="dropNav" id="dropNav">
       <li><a href="index.html">HOME</a></li>
       <li><a href="music.html">MUSIC</a></li>
